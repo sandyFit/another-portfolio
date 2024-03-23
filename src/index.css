@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Changa:wght@200..800&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Radio+Canada:ital,wght@0,300..700;1,300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Gugi&family=Magra:wght@400;700&family=Manuale:ital,wght@0,300..800;1,300..800&family=Metamorphous&family=Nova+Round&family=Prosto+One&family=Redressed&family=Stick+No+Bills:wght@200..800&family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+
+/* ============== LOGO SPINNING TEXT ============= */
+
+.spinning-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  animation: spin 15s linear infinite;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+/*================MOTION TEXT================*/
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes rotateIcon {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.rotating-icon {
+  animation: rotateIcon 3s linear infinite;
+}
+
+
+.motion-text {
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    animation: slideLeft 40s linear infinite;
+}
+
+
+
+
+/* =========== LINKS HOVER ============ */
+.nav-btn {
+  box-shadow: inset 160px 0 0 0 #151226;
+  border-radius: 5px;
+  color: white;
+}
+
+.flipOnHover:hover {
+  box-shadow: inset 160px 0 0 0 #151226;
+  color: white;
+}
+/* ======================= */
+
+
+
+@layer base {
+    html, body {
+        @apply w-full h-full box-border  m-0 p-0 bg-skyIce-900;
+    }
+
+    h1 {
+        @apply  font-semibold tracking-tighter
+    }
+}
+
+@layer utilities {
+
+}
+
+
+
+
+
+/*
+pink: rgb(252, 194, 204)
+tiffany blue: rgb(192, 250, 248)
+green: rgb(220, 252, 229)
+yellow: rgb(252, 240, 220)
+*/
+

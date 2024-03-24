@@ -11,10 +11,57 @@
 
 
 .app-title {
-        background: linear-gradient( rgb(241, 110, 226) 0%, rgb(155,81,224) 90%);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-    }
+  background: linear-gradient(to right,
+    rgb(16, 185, 129), rgb(134, 58, 205) 95%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+
+.hero-title {
+  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWh2dDhkZ2wwOW56NTV1eXNzY3IwMW52ZDJxbGw3NXo5eGgyY2Y2ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UYgkFrfCaPJEk/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;  
+}
+
+/* ============== NAV LINKS NAVIGATION ============== */
+.nav-link {
+  background-image: linear-gradient(
+    to right,
+    rgb(134, 58, 205), rgb(82, 10, 150) 40%,  #000 80%);
+ 
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:before {
+  content: '';
+  background: rgb(155,81,224);
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+ background-position: 0;
+}
+
+.nav-link:hover::before {
+  width:100%;
+}
 
 /* ============== LOGO SPINNING TEXT ============= */
 

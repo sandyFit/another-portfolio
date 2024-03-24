@@ -6,14 +6,14 @@ const Navbar = () => {
     return (                      
         <nav className='flex justify-between items-center w-full h-[80px] fixed top-0 left-0 bg-zinc-300 z-20 
             hover:text-zinc-900 '>               
-            <p className='text-skyIce-950 font-syne text-lg font-semibold uppercase ml-28'>
+            <p className='text-skyIce-950 font-syne text-lg font-[700] uppercase ml-28'>
                 <ScrollLink to="hero" >portfolio</ScrollLink>
             </p>
             <div className="relative w-[47.5%]">
-                <div className='flex justify-center items-center mr-2'>           
+                <div className='flex justify-center items-center mr-8'>           
                     <ul className='w-full flex justify-between items-center bg-zinc-300'> 
                         {['about', 'projects', 'playground', 'resume'].map((item, index) => (
-                            <li className='text-skyIce-950 font-syne text-lg font-semibold hover:text-purple-500 
+                            <li className='text-skyIce-950 font-syne text-lg font-[700] nav-link
                             px-6 py-2 uppercase'
                                 key={index}
                                 
@@ -25,8 +25,8 @@ const Navbar = () => {
                         ))}
 
                         <ScrollLink to='contact' smooth={true} duration={500}>
-                            <button className="text-skyIce-950 font-syne text-lg font-semibold hover:text-purple-500 
-                            px-6 py-2 uppercase">                                                                
+                            <button className="text-skyIce-950 font-syne text-lg font-[700] nav-link
+                            uppercase">                                                                
                                 get in touch                                                                   
                             </button>
                         </ScrollLink>

@@ -32,7 +32,7 @@ const Sidebar = () => {
             setActiveSection('My Digital Chaos');
             break;
         case 'contact':
-            setActiveSection("Drop Me a Line");
+            setActiveSection("Let's Collab!");
             break;
         default:
             setActiveSection('Welcome 🖐');

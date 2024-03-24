@@ -1,7 +1,7 @@
 import { ArrowRight, ArrowRightAltSharp, CopyrightRounded, GitHub, Instagram, LinkedIn, SouthEast } from '@mui/icons-material';
 import React from 'react'
-import { FaArrowAltCircleRight, FaHeart } from 'react-icons/fa';
-
+import { FaCopyright, FaHeart } from 'react-icons/fa';
+import {CgArrowTopRight } from "react-icons/cg";
 
 
 const Footer = () => {
@@ -10,63 +10,45 @@ const Footer = () => {
     
 
     return (
-        <section name='contact' className='w-full min-h-full flex flex-col relative'>
+        <section id='contact' className='w-full min-h-screen bg-skyIce-950 flex flex-col'>
             {/* Content */}
 
-            <div id='contact' className="flex flex-col justify-start relative ml-56 ">              
-                <h1 className='font-syne text-skyIce-300 uppercase z-10 text-[7.5rem] font-[750] tracking-[-.3rem] mt-20'>
-                    drop me a line
-                </h1>
+            <div  className="flex flex-col items-start w-full h-full pl-56 mt-56">  
+                <div className="flex flex-col w-full h-full justify-start">
+                    <h1 className='font-prosto font-[950] text-zinc-300 text-[8rem] tracking-tight uppercase 
+                                leading-[85px] m'>
+                        drop me a line
+                    </h1>
 
 
-                <p className='w-1/2 font-syne text-skyIce-300 text-[2rem] font-[200] tracking-[.1rem] mt-12'>
-                    Whether you have a question, want to work together, or just say hello, please drop me a line.
-                </p>
-            
-                <a href="mailto:sandy07r@gmail.com" className='flex justify-start'>
-                    <p className='font-syne text-salmon-400 hover:text-skyIce-300 text-[2.5rem] font-[200] 
-                    tracking-[.1rem] underline'>
-                        <ArrowRightAltSharp style={{fontSize: '2.5rem'}}/>
-                        hello@trishramos.com
+                    <p className='w-1/2 font-syne text-zinc-500 text-2xl font-[200] tracking-[.1rem] mt-16'>
+                        Whether you have a question, want to work together, or just say hello, please drop me a line.
                     </p>
-                </a>
-
-                <div className="w-full h-full grid grid-cols-2 place-items-between mt-[15.2rem] mb-12">     
-                    <div className='flex justify-self-start gap-56'>
-                        <div className='flex justify-start text-zinc-300 mt-20 gap-12'>
-                            <Instagram 
-                                style={{ fontSize: '2rem',  cursor: 'pointer', transition: 'opacity 0.2s' }}
-                                onMouseOver={(e) => e.target.style.opacity = 0.65}
-                                onMouseOut={(e) => e.target.style.opacity = 2} 
-                            />
-                            <LinkedIn 
-                                style={{ fontSize: '2rem', cursor: 'pointer', transition: 'opacity 0.3s' }}
-                                onMouseOver={(e) => e.target.style.opacity = 0.65}
-                                onMouseOut={(e) => e.target.style.opacity = 1}
-                            />
-                            <GitHub 
-                                style={{ fontSize: '2rem', cursor: 'pointer', transition: 'opacity 0.3s' }}
-                                onMouseOver={(e) => e.target.style.opacity = 0.65}
-                                onMouseOut={(e) => e.target.style.opacity = 1}
-                            /> 
-                        </div>
-
-
-                        <div className="w-full flex text-xl font-medium uppercase text-zinc-300 mt-20">
-                            <CopyrightRounded style={{marginTop: '.1rem', fontSize: '1.8rem'}}/>
-                            {`${date.getFullYear()}  |   Crafted with`}
-                            <FaHeart style={{color: 'red', margin: '3px 4px 0 4px', opacity: '.7'}}/>
-                            {'by yours truly'}
-                        </div>
-                    </div>  
+                
+                    <a href="mailto:sandy07r@gmail.com" className='flex justify-start'>
+                        <p className='font-syne text-fuchsia-400 app-title text-[2.5rem] font-[200] inline-flex
+                        tracking-[.1rem] hove:underline mt-8 border-2 border-purple-400 rounded-[100px] py-2 px-8'>
+                            
+                            hello@trishramos.com
+                            <CgArrowTopRight
+                                style={{ fontSize: '3rem', fontWeight: '100', margin: '3px 0 0 2px', color: '#7e22ce' }}/>
+                        </p>
+                    </a>
+                </div>    
+           
+                <div className="w-full h-full flex flex-col justify-start mt-60">     
                     
+                    <hr className='w-[80%] border-t-[1px] border-zinc-700'/>
 
-                    {/* <div className="before::content[''] absolute top-[20rem] left-[64%] w-[65rem] h-[65rem] bg-transparent 
-                        rounded-full border-[160px] border-salmon-300 z-0">
-                    </div> */}
-
-                </div>           
-            </div>
+                    <div className="w-full h-full flex font-normal uppercase text-zinc-500 mt-8
+                        tracking-wide">
+                        <FaCopyright style={{margin: '.25rem .5rem 0 0', fontSize: '1rem'}}/>
+                        {`${date.getFullYear()}. Trish ramos |   Crafted with`}
+                        <FaHeart style={{ color: 'red', margin: '5px 8px 0 6px', opacity: '.6' }} />
+                        {'by yours truly'}
+                    </div>             
+                </div>
+            </div>           
              
             
         </section>

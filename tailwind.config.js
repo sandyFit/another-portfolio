@@ -20,12 +20,25 @@ export default {
           900: '#1b1830',
           950: '#151226'
         },
+
+        skyIceRgba: {
+          300: '#7c5dec99'
+        },
+
         salmon: {
+          
           300: '#fc7991',
           400: '#ff637f',
           500: '#fa4d6c'
-      },
+        },
+        
+        salmonRgba: {
+          300: '#d4d4d8b3',
+        },
+
         orangey: {
+          100: '#fc9799',
+          200: '#fa787a',
           300: '#fc686a',
           400: '#fb4b4e',
         },
@@ -56,7 +69,8 @@ export default {
         arya: ["Arya", 'sans-serif'],
         chivo: ["Chivo Mono", 'monospace'],
         magra: ["Pragati Narrow", 'sans-serif'],
-        spaceGrotesk: ["Space Grotesk", 'sans-serif']
+        spaceGrotesk: ["Space Grotesk", 'sans-serif'],
+        ibm: ['IBM Plex Mono', 'monospace']
       },
 
       backgroundImage: {

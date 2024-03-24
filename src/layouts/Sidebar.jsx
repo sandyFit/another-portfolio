@@ -51,7 +51,8 @@ const Sidebar = () => {
     return (
         <section className='w-[80px] h-full flex flex-col justify-between items-center border-2
             border-skyIce-950 gap-60 fixed inset-0 z-30 bg-zinc-300'>           
-            <p className="text-zinc-300 text-[4rem] font-syne font-bold flex justify-center items-center w-full h-[78px] border-b-2 border-skyIce-950 bg-skyIce-950">
+            <p className="text-zinc-300 text-[3.2rem] font-gugi font-bold flex justify-center items-center w-full 
+                h-[78px] border-b-2 border-skyIce-950 bg-skyIce-950">
                 <Link to="hero" className="w-full h-full flex justify-center items-center">T</Link>
             </p>
             

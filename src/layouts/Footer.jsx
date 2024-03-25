@@ -38,7 +38,7 @@ const Footer = () => {
            
                 <div className="w-full h-full flex flex-col justify-start mt-60">     
                     
-                    <hr className='w-[80%] border-t-[1px] border-zinc-700'/>
+                    <hr className='w-[90%] border-t-[1px] border-zinc-700 '/>
 
                     <div className="w-full h-full flex font-normal uppercase text-zinc-500 mt-8
                         tracking-wide">

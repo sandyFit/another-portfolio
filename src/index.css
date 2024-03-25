@@ -10,6 +10,33 @@
 @tailwind utilities; 
 
 
+
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+  
+}
+
+.revealText {
+  animation: textReveal 6s ease;
+}
+
+/* =============== RANDOM LETTER REVEAL ================ */
+.letter-container span {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.letter-container .revealed {
+  opacity: 1;
+}
+
+/* ============ GRADIENT TEXT ============ */
 .app-title {
   background: linear-gradient(to right,
     rgb(16, 185, 129), rgb(134, 58, 205) 95%);
@@ -17,15 +44,6 @@
   -webkit-background-clip: text;
 }
 
-
-.hero-title {
-  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWh2dDhkZ2wwOW56NTV1eXNzY3IwMW52ZDJxbGw3NXo5eGgyY2Y2ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UYgkFrfCaPJEk/giphy.gif);
-  background-size: cover;
-  color: transparent;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
-  text-transform: uppercase;  
-}
 
 /* ============== NAV LINKS NAVIGATION ============== */
 .nav-link {
@@ -114,7 +132,7 @@
     white-space: nowrap;
     margin: 0;
     padding: 0;
-    animation: slideLeft 40s linear infinite;
+    animation: slideLeft 20s linear infinite;
 }
 
 

@@ -43,7 +43,7 @@ const Hero = () => {
                                 icon={<FaAsterisk style={{ color: '#6b21a8', fontSize: '20px', marginTop: '4px' }}
                                     className='rotating-icon'
                                 />}
-                                text={'Building digital experiences that connect design & technology'}
+                                text={"helping brands come to life through design & code"}
                             />
                         </div>
                         
@@ -70,20 +70,19 @@ const Hero = () => {
 
                     <div className="flex flex-col">
                         <h3 className='font-syne text-3xl text-purple-400 text-opacity-80 mb-2 tracking-widest'>
-                            <span className='text-emerald-500'>[</span>TLDR
-                            <span className='text-emerald-500'>]</span>
+                            <span className='text-emerald-500'>{'<'}</span>TLDR
+                            <span className='text-emerald-500'>{'/>'}</span>
                         </h3>
                         
                         
                         <p className='font-syne text-[1.46rem] text-zinc-500 font-[100] pb-16 tracking-wide'>
-                            Hi, I'm Trish Ramos, a frontend developer & web designer based in Colombia
-                            <br /> <br />
-                            I'm currently on the lookout for full-time roles or freelance gigs that challenge my skills and
-                            stoke my passion for design and development.<br />
+                            Hi, I'm Trish Ramos, a creative developer specializing in frontend & motion.
+                            <br /> 
+                            Based in Colombia, I build websites that are engaging, responsive & secure.<br />
                                 <Link to='contact' className='text-purple-400 text-opacity-90 hover:text-purple-300 
                                     mr-4 bg-purple-300 bg-opacity-10 hover:bg-opacity-25 border-2 border-emerald-500
                                     inline-flex py-1 px-4 border-opacity-90 rounded-3xl mt-4'>
-                                    Let's collab!
+                                    Let's build together!
                                     <CgArrowTopRight
                                         style={{ fontSize: '1.5rem', fontWeight: '100', margin: '3px 0 0 2px', color: '#a855f7' }}/>
                                 </Link><br/>                                                  

@@ -9,21 +9,22 @@ const RandomLetterReveal = ({ text }) => {
         let remainingIndices = characters.map((_, index) => index); // Array of all indices
 
         const revealLetter = () => {
-        if (remainingIndices.length === 0) {
-            return;
-        }
+            if (remainingIndices.length === 0) {
+                return;
+            }
 
-        const randomIndex = Math.floor(Math.random() * remainingIndices.length);
-        const selected = remainingIndices[randomIndex];
+            const randomIndex = Math.floor(Math.random() * remainingIndices.length);
+            const selected = remainingIndices[randomIndex];
 
-        setRevealedIndices((current) => [...current, selected]);
+            setRevealedIndices((current) => [...current, selected]);
 
-        remainingIndices = remainingIndices.filter((_, index) => index !== randomIndex);
+            remainingIndices = remainingIndices.filter((_, index) => index !== randomIndex);
         };
 
         const intervalId = setInterval(revealLetter, 100); // Adjust timing as needed
 
         return () => clearInterval(intervalId);
+        
     }, [text]); // Effect depends on 'text' prop
 
     return (

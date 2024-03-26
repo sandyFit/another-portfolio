@@ -29,7 +29,7 @@
 /* =============== RANDOM LETTER REVEAL ================ */
 .letter-container span {
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity .01s ease;
 }
 
 .letter-container .revealed {
@@ -132,7 +132,7 @@
     white-space: nowrap;
     margin: 0;
     padding: 0;
-    animation: slideLeft 20s linear infinite;
+    animation: slideLeft 30s linear infinite;
 }
 
 

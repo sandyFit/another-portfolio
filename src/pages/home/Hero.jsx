@@ -16,12 +16,12 @@ const Hero = () => {
     }
 
     return (
-        <section id='hero' className="w-full min-h-screen grid grid-cols-[70%_30%] bg-skyIce-950 border-[1px] 
+        <section id='hero' className="w-full min-h-screen grid grid-cols-[70%_30%] bg-skyIce-950 border-[1px] border-dashed
             border-zinc-700">
             {/* Left Column */}
             <div className="flex  flex-col w-full h-full">
                 
-                <div className="flex w-full border-[1px] border-zinc-800 h-[65%] hover:bg-skyIce-900 
+                <div className="flex w-full border-[1.5px] border-dashed border-zinc-700 h-[65%] hover:bg-skyIce-900 
                     justify-center pl-16 pt-28" >
                 
                     <p className='font-gugi text-[22rem] tracking-wider app-title '                       
@@ -30,10 +30,10 @@ const Hero = () => {
                     </p>
                 </div>
                
-                <div className="flex w-full h-[35%] items-center  " >                  
+                <div className="flex w-full h-[35%] items-center border-[1.5px] border-dashed border-zinc-700" >                  
                     <div className="w-full flex flex-col ">
                         <p className='font-prosto uppercase text-[5.8rem] text-zinc-300 leading-[110px] font-[800] 
-                            tracking-tight pl-32'>
+                            tracking-tight pl-32 '>
                             <RandomLetterReveal text="CREATIVE DEVELOPER" />
                         </p>
 
@@ -43,7 +43,7 @@ const Hero = () => {
                                 icon={<FaAsterisk style={{ color: '#6b21a8', fontSize: '20px', marginTop: '4px' }}
                                     className='rotating-icon'
                                 />}
-                                text={"helping brands come to life through design & code"}
+                                text={"Crafting Designs that Speak in Pixels."}
                             />
                         </div>
                         
@@ -59,7 +59,8 @@ const Hero = () => {
             {/* Right Column */}
             <div className="flex flex-col w-full h-full">
                 {/* Row 1 - 65% Height */}
-                <div className="flex flex-col justify-between w-full h-[65%] hover:bg-skyIce-900 pt-24 pl-12 pr-8" >
+                <div className="flex flex-col justify-between w-full h-[65%] hover:bg-skyIce-900 pt-24 pl-12 pr-8
+                    border-b-[1px] border-dashed border-zinc-700" >
 
                     <button className="flex justify-end items-end text-emerald-500 text-4xl"
                         onClick={handleClick}
@@ -75,14 +76,15 @@ const Hero = () => {
                         </h3>
                         
                         
-                        <p className='font-syne text-[1.46rem] text-zinc-500 font-[100] pb-16 tracking-wide'>
-                            Hi, I'm Trish Ramos, a creative developer specializing in frontend & motion.
+                        <p className='font-syne text-[1.38rem] text-zinc-500 font-[100] pb-24 tracking-wide'>
+                            Hi, I'm Trish Ramos, a web designer specializing in frontend development. 
                             <br /> 
-                            Based in Colombia, I build websites that are engaging, responsive & secure.<br />
+                            Based in Colombia, I build web stuff that is engaging, responsive & secure.<br />
+                            Currently seeking full-time opportunities or freelance gigs to unleash creativity.<br />
                                 <Link to='contact' className='text-purple-400 text-opacity-90 hover:text-purple-300 
                                     mr-4 bg-purple-300 bg-opacity-10 hover:bg-opacity-25 border-2 border-emerald-500
                                     inline-flex py-1 px-4 border-opacity-90 rounded-3xl mt-4'>
-                                    Let's build together!
+                                    Let's connect!
                                     <CgArrowTopRight
                                         style={{ fontSize: '1.5rem', fontWeight: '100', margin: '3px 0 0 2px', color: '#a855f7' }}/>
                                 </Link><br/>                                                  
@@ -90,7 +92,7 @@ const Hero = () => {
                     </div>
                 </div>
                 
-                <div className="flex w-full border-[1px] border-zinc-800 h-[35%] hover:bg-skyIce-900 justify-center
+                <div className="flex w-full  h-[35%] hover:bg-skyIce-900 justify-center
                     items-center z-10" >
                     <div className="absolute w-[180px] h-[180px] bg-purple-200 bg-opacity-20 rounded-full
                         border-[2px] border-opacity-40 border-emerald-400 -z-10"></div>

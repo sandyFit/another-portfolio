@@ -11,7 +11,7 @@ const Logo = ({ text }) => {
                       d="M60,10 a50,50 0 1,0 0,100 a50,50 0 1,0 0,-100" />
 
                 <text fontSize="12" fontWeight="400" fontFamily="Syne"
-                      fill="#D4D4D8" style={{ letterSpacing: '2.35px' }}>
+                      fill="#D4D4D8" style={{ letterSpacing: '1.5px' }}>
                     <textPath xlinkHref="#circlePath" startOffset="50%" textAnchor="middle" dominantBaseline="hanging">
                         {text }
                     </textPath>

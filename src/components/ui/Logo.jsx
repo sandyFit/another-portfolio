@@ -4,7 +4,7 @@ import React from "react";
 // React component for circular and correctly oriented text
 const Logo = ({ text }) => {
     return (
-        <svg viewBox="0 0 120 120" width="160" height="160" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+        <svg viewBox="0 0 120 120" width="120" height="120" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <g>
                 {/* Ensure the path defines a circle that fits within the viewBox */}
                 <path id="circlePath" fill="none" stroke="none"

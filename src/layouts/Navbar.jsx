@@ -5,9 +5,9 @@ import { BsArrowRight } from "react-icons/bs";
 const Navbar = () => {
     return (                      
         <nav className='flex justify-between items-center w-full h-[80px] fixed top-0 left-0 bg-zinc-300 z-20 
-            hover:text-zinc-900 '>               
+            hover:text-zinc-900 border-b-2 border-zinc-700'>               
             <p className='text-skyIce-950 font-syne text-lg font-[700] uppercase ml-28'>
-                <ScrollLink to="hero" >portfolio</ScrollLink>
+                <ScrollLink to="hero" >trish ramos</ScrollLink>
             </p>
             <div className="relative w-[47.5%]">
                 <div className='flex justify-center items-center mr-8'>           

@@ -2,23 +2,29 @@
 import React from 'react';
 
 
-const MotionText = ({ icon, text}) => {
+const MotionText = ({ icon, text1, text2, text3}) => {
   const repetitions = Array(4).fill(null);
 
   return (
-        <div className="w-full z-10 border-t-[1.8px] border-b-[1.8px] border-dashed border-zinc-700 flex items-center py-1"
+        <div className="w-full h-full z-10 flex items-center py-2 border-t-[1.5px] border-b-[1.5px] border-dashed 
+            border-purple-400"
             style={{ overflow: 'hidden'}}>
-            <h2 className=' motion-text font-space-prosto text-2xl  font-syne app-title font-[500] tracking-[.38rem] 
-                uppercase '>
+            <h2 className=' motion-text font-ibm text-[1.5rem] font-[400] tracking-wider uppercase'>
                 <div style={{ display: 'flex', whiteSpace: 'nowrap' }}>
                     {repetitions.map((_, index) => (
                         <React.Fragment key={index}>
-                        <span  style={{color: '#f2f2f2'}}>
-                            {icon}
-                        </span>
-                        <span className='text-zinc-300 mx-12' >{text}</span>
-                                      
-                                    
+                            <span  style={{color: '#f2f2f2'}}>
+                                {icon}
+                            </span>
+                            <span className='text-emerald-400 mx-6' >{text1}</span>
+                            <span  style={{color: '#f2f2f2'}}>
+                                {icon}
+                            </span>
+                            <span className='text-emerald-400 mx-6' >{text2}</span>
+                            <span  style={{color: '#f2f2f2'}}>
+                                {icon}
+                            </span>
+                            <span className='text-emerald-400 mx-6' >{text3}</span>
                         </React.Fragment>
                     ))}
                 </div>

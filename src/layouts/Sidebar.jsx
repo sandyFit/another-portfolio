@@ -49,10 +49,10 @@ const Sidebar = () => {
 
 
     return (
-        <section className='w-[80px] h-full flex flex-col justify-between items-center border-2
-            border-skyIce-950 gap-60 fixed inset-0 z-30 bg-zinc-300'>           
+        <section className='w-[80px] h-full flex flex-col justify-between items-center border-r-[2px]
+            border-zinc-700 gap-60 fixed inset-0 z-30 bg-zinc-300'>           
             <p className="text-zinc-300 text-[3.2rem] font-gugi font-bold flex justify-center items-center w-full 
-                h-[78px] border-b-2 border-skyIce-950 bg-skyIce-950">
+                h-[80px]  bg-skyIce-950">
                 <Link to="hero" className="w-full h-full flex justify-center items-center">T</Link>
             </p>
             
@@ -62,8 +62,8 @@ const Sidebar = () => {
                 </p>
             </article>
 
-            <article className='flex flex-col justify-evenly items-center w-full h-[20rem] text-zinc-300 
-                 bg-skyIce-950 '>
+            <article className='flex flex-col justify-evenly items-center w-full h-[35%] text-zinc-300 
+                 bg-skyIce-950 border-t-2 border-dashed border-zinc-900 '>
                 <FaInstagram 
                     style={{ fontSize: '2rem',  cursor: 'pointer', transition: 'opacity 0.2s' }}
                     onMouseOver={(e) => e.target.style.opacity = 0.65}

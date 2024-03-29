@@ -16,8 +16,8 @@ const Footer = () => {
 
             <div  className="flex flex-col items-start w-full h-full pl-56 mt-56">  
                 <div className="flex flex-col w-full h-full justify-start">
-                    <h1 className='font-prosto uppercase text-[5.8rem] text-zinc-300 leading-[110px] font-[800] 
-                            tracking-tight'>
+                    <h1 className='font-ibm uppercase text-[7rem] text-zinc-300 leading-[110px] font-[500] 
+                            tracking-widest'>
                         <RandomLetterReveal text={"let's connect"}/> <br/>
                     </h1>
                     

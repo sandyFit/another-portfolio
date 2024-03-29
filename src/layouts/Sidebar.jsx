@@ -23,16 +23,16 @@ const Sidebar = () => {
             setActiveSection('Welcome');
             break;
         case 'about':
-            setActiveSection('Nice to Meet You');
+            setActiveSection('who i am');
             break;
         case 'projects':
-            setActiveSection('Selected Works');
+            setActiveSection('my projects');
             break;
         case 'playground':
-            setActiveSection('My Digital Chaos');
+            setActiveSection('My Chaos');
             break;
         case 'contact':
-            setActiveSection("Drop Me a Line");
+            setActiveSection("say hi");
             break;
         default:
             setActiveSection('Welcome 🖐');
@@ -49,33 +49,32 @@ const Sidebar = () => {
 
 
     return (
-        <section className='w-[80px] h-full flex flex-col justify-between items-center border-r-[2px]
-            border-zinc-700 gap-60 fixed inset-0 z-30 bg-zinc-300'>           
-            <p className="text-zinc-300 text-[3.2rem] font-gugi font-bold flex justify-center items-center w-full 
+        <section className='w-[70px] h-full flex flex-col justify-between items-center gap-48 fixed top-0 left-2 z-30 
+            bg-transparent'>           
+            {/* <p className="text-zinc-300 text-[3.2rem] font-gugi font-bold flex justify-center items-center w-full 
                 h-[80px]  bg-skyIce-950">
                 <Link to="hero" className="w-full h-full flex justify-center items-center">T</Link>
-            </p>
+            </p> */}
             
-            <article className="flex justify-center" style={{ width: '300px' }}>
-                <p className='text-skyIce-950 font-sora text-2xl tracking-wide font-[400] -rotate-90 '>
+            <article className="flex justify-center mt-96" style={{ width: '300px' }}>
+                <p className='text-purple-500 font-ibm text-xl tracking-[.6rem] font-[500] -rotate-90 uppercase'>
                     {activeSection}
                 </p>
             </article>
 
-            <article className='flex flex-col justify-evenly items-center w-full h-[35%] text-zinc-300 
-                 bg-skyIce-950 border-t-2 border-dashed border-zinc-900 '>
+            <article className='flex flex-col justify-evenly items-center w-full h-[26%] text-zinc-300 gap-6'>
                 <FaInstagram 
-                    style={{ fontSize: '2rem',  cursor: 'pointer', transition: 'opacity 0.2s' }}
+                    style={{ fontSize: '1.5rem',  cursor: 'pointer', transition: 'opacity 0.2s' }}
                     onMouseOver={(e) => e.target.style.opacity = 0.65}
                     onMouseOut={(e) => e.target.style.opacity = 2} 
                 />
                 <FaLinkedin 
-                    style={{ fontSize: '2rem', cursor: 'pointer', transition: 'opacity 0.3s' }}
+                    style={{ fontSize: '1.5rem', cursor: 'pointer', transition: 'opacity 0.3s' }}
                     onMouseOver={(e) => e.target.style.opacity = 0.65}
                     onMouseOut={(e) => e.target.style.opacity = 1}
                 />
                 <FaGithub
-                    style={{ fontSize: '2rem', cursor: 'pointer', transition: 'opacity 0.3s' }}
+                    style={{ fontSize: '1.5rem', cursor: 'pointer', transition: 'opacity 0.3s' }}
                     onMouseOver={(e) => e.target.style.opacity = 0.65}
                     onMouseOut={(e) => e.target.style.opacity = 1}
                 /> 

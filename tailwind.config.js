@@ -49,6 +49,12 @@ export default {
           400: '#fb4b4e',
         },
 
+        electro: {
+          100: '#89fa8f',
+          200: '#50fa59',
+          300: '#2ef938'
+        }
+
       },
 
       fontFamily: {

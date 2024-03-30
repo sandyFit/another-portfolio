@@ -46,40 +46,7 @@
 
 
 /* ============== NAV LINKS NAVIGATION ============== */
-.nav-link {
-  background-image: linear-gradient(
-    to right,
-    rgb(134, 58, 205), rgb(82, 10, 150) 40%,  #000 80%);
- 
-  background-size: 200% 100%;
-  background-position: -100%;
-  display: inline-block;
-  padding: 5px 0;
-  position: relative;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out;
-}
 
-.nav-link:before {
-  content: '';
-  background: rgb(155,81,224);
-  display: block;
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 3px;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-link:hover {
- background-position: 0;
-}
-
-.nav-link:hover::before {
-  width:100%;
-}
 
 /* ============== LOGO SPINNING TEXT ============= */
 
@@ -142,9 +109,9 @@
 
 
 .flipOnHover:hover {
-  box-shadow: inset 210px 0 0 0 #151226;
-  border-radius: 20px;
-  color: white;
+  box-shadow: inset 200px 0 0 0 #7e22ce;
+  color: #d4d4d4;
+  font-weight: 500;
 }
 /* ======================= */
 

@@ -56,29 +56,40 @@ const Hero = () => {
     return (
         <section
             id="hero"
-            className="w-full h-screen flex flex-col justify-between bg-skyIce-950 relative "
-        >          
-            <div className="flex flex-col items-end w-[20%] mt-28 pr-6 absolute left-[93.5rem] ">
-                <h3 className='font-ibm text-lg font-[400] text-purple-500'>
-                    <span className='text-electro-300'>{'<'}</span>
-                    timezone
-                    <span className='text-electro-300'>{'/>'}</span>
-                    
-                </h3>
-                <div className='w-full text-zinc-400 uppercase font-ibm font-[400] text-right'
-                    id='currentTime'
-                >
-                    Bogota gmt-5 <br /> <span className='tracking-wider'>{currentTime}</span>
+            className="w-full h-screen flex flex-col justify-between bg-slate-950 relative"
+        >    
+            <div className="flex justify-between w-full relative">
+
+                <div className="flex absolute top-36 left-32">
+                    <h3 className='font-ibm text-lg font-[400] text-purple-500'>
+                        <span className='text-electro-300'>{'<'}</span>
+                        creative
+                        <span className='text-electro-300'>{'/>'}</span>
+                        
+                    </h3>
                 </div>
-            </div>
+                <div className="flex flex-col items-end w-[20%] mt-28 pr-6 absolute left-[93.5rem] ">
+                    <h3 className='font-ibm text-lg font-[400] text-purple-500'>
+                        <span className='text-electro-300'>{'<'}</span>
+                        timezone
+                        <span className='text-electro-300'>{'/>'}</span>
+                        
+                    </h3>
+                    <div className='w-full text-zinc-400 uppercase font-ibm font-[400] text-right'
+                        id='currentTime'
+                    >
+                        Bogota gmt-5 <br /> <span className='tracking-wider'>{currentTime}</span>
+                    </div>
+                </div>
+            </div>    
 
             <div className="flex flex-col w-full h-full ">
                 <article className="flex flex-col justify-between w-full h-full ">
                     <div className="w-full flex flex-col justify-center items-start mt-32 pl-32">
                         <p className="font-ibm uppercase text-[11rem] text-zinc-300 font-[400] ">
-                            _designer
+                            designer
                         </p>
-                        <p className="font-ibm uppercase text-[11rem] text-electro-300 font-[400] ml-[24rem] 
+                        <p className="font-ibm uppercase text-[11rem] text-electro-300 font-[400] ml-[26rem] 
                             mt-[-7rem]">
                             & developer_
                         </p>
@@ -117,15 +128,15 @@ const Hero = () => {
                                         </h3> 
                                         </div>
                                         <p className='w-full text-zinc-400 uppercase font-ibm font-[400] mt-2'>
-                                            Currently on the look for roles or gigs where I can seamlessly bridge design & code.
+                                            I'm open for freelance and permanent role opportunities where I can seamlessly bridge design & code.
                                             <br/>
                                             Let's create something cool!
                                         </p>
                                         
                                         <div className="flex uppercase tracking-[.28rem]">
-                                            <Link to='contact' className="group relative inline-flex h-[calc(38px+8px)] items-center 
-                                                justify-center  py-1 pl-8 pr-16 text-[1.3rem] font-medium text-electro-300
-                                                border-[1.5px] border-dotted border-purple-400 mt-6"
+                                            <Link to='contact' className="group relative inline-flex h-[calc(36px+8px)] items-center 
+                                                justify-center  py-1 pl-6 pr-20 text-[1.2rem] font-[400] text-electro-300
+                                                border-[1.5px] border-dotted border-purple-400 mt-4"
                                                 smooth={true} 
                                                 duration={500}
                                             >
@@ -171,7 +182,7 @@ const Hero = () => {
                                         
                                         <span className='text-electro-300 mr-2'>{'<'}</span>
                                         <BsMoon style={{margin: '5px 5px 0 2px', fontSize: '18px', color: 'd4d4d8'}}/>
-                                    Shade On
+                                    shade on
                                     <span className='text-electro-300 ml-1'>{'/>'}</span>                         
                                 </div>                                 
                             </div> 
@@ -182,7 +193,7 @@ const Hero = () => {
                                         
                                         <span className='text-electro-300 mr-2'>{'<'}</span>
                                         <BsSun style={{margin: '5px 5px 0 2px', fontSize: '18px', color: 'd4d4d8'}}/>
-                                    Shine On
+                                    shine on
                                     <span className='text-electro-300 ml-1'>{'/>'}</span>                         
                                 </div>                                 
                             </div> 

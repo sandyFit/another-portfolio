@@ -10,7 +10,7 @@ const Footer = () => {
     
 
     return (
-        <section id='contact' className='w-full h-screen bg-skyIce-950 flex flex-col'>
+        <section id='contact' className='w-full h-screen bg-slate-950 flex flex-col'>
             {/* Content */}
 
             <div className="w-[10%] flex justify-start items-center font-ibm text-lg font-[400] text-purple-500 
@@ -70,7 +70,7 @@ const Footer = () => {
                     </div>
                 </div>               
                 
-                <div className="flex justify-end items-end w-[9.6%] ml-24 pb-16 relative left-[99.5rem] top-[11.5rem]">
+                <div className="flex justify-end items-end w-[9.6%] ml-24 pb-16 relative left-[99.5rem] top-[12.5rem]">
                     <ScrollLink to="hero"
                         smooth={true} 
                         duration={500}
@@ -83,7 +83,7 @@ const Footer = () => {
                     <hr className="absolute top-16 left-[120px] w-20 border-t-[1px] border-dashed border-electro-300 rotate-90"/>
                 </div> 
                
-                <div className="w-full h-full flex flex-col mt-[9.4rem] pl-32">                        
+                <div className="w-full h-full flex flex-col mt-[10.2rem] pl-32">                        
                     <hr className='w-[94%] border-t-[1px] border-dotted border-purple-400 ' />
                      <div className="w-full flex justify-between">
                         <div className="w-full h-full flex font-ibm uppercase text-zinc-400 mt-5

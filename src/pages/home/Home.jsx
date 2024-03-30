@@ -7,7 +7,7 @@ import Project from './Project'
 const Home = () => {
     return (
         <section>
-            <Hero />
+             <Hero />
             <About />
             {/* <Project/> */}
             

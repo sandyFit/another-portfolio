@@ -32,7 +32,7 @@ const Sidebar = () => {
             setActiveSection('My Chaos');
             break;
         case 'contact':
-            setActiveSection("say hi");
+            setActiveSection("contact me");
             break;
         default:
             setActiveSection('Welcome 🖐');
@@ -62,7 +62,7 @@ const Sidebar = () => {
                 </p>
             </article>
 
-            <article className='flex flex-col justify-evenly items-center w-full h-[26%] text-zinc-300 gap-6'>
+            <article className='flex flex-col justify-evenly items-center w-full h-[26%] text-zinc-300 gap-6 pb-5'>
                 <FaInstagram 
                     style={{ fontSize: '1.5rem',  cursor: 'pointer', transition: 'opacity 0.2s' }}
                     onMouseOver={(e) => e.target.style.opacity = 0.65}

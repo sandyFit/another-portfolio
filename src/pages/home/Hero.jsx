@@ -59,7 +59,6 @@ const Hero = () => {
             className="w-full h-screen flex flex-col justify-between bg-slate-950 relative"
         >    
             <div className="flex justify-between w-full relative">
-
                 <div className="flex absolute top-36 left-32">
                     <h3 className='font-ibm text-lg font-[400] text-purple-500'>
                         <span className='text-electro-300'>{'<'}</span>
@@ -97,20 +96,21 @@ const Hero = () => {
                                       
                     <div className="flex w-full justify-between" >                             
                         <div className="flex w-full flex-col pl-72 z-10">
-                            <div className="flex w-[50%] ">
+                            <div className="flex w-[60%] ">
                                 <div className="flex  flex-col px-10">
                                     <div className="flex">
                                         
                                         <h3 className='w-full font-ibm text-lg font-[400] text-purple-500 tracking-widest'>
                                             <span className='text-electro-300 mr-2'>{'['}</span>
-                                            Hello, World!
+                                            "Hello, World!"
                                             <span className='text-electro-300 ml-2'>{']'}</span>                        
                                         </h3>  
                                     </div>
-                                    <p className='w-full text-zinc-400 uppercase font-ibm font-[400] mt-2'>
-                                        I'm Trish Ramos, a creative developer based in Colombia.
+                                    <p className='w-full text-zinc-400 text-[1.05rem] font-ibm font-[400] mt-2'>
+                                        I'm Trish Ramos, your go-to creative developer from Colombia.
                                         <br/>
-                                        I build web stuff that is engaging, responsive & secure.
+                                        Building web wonders that are engaging, responsive & secure.<br /> 
+                                        Serving kind souls globally.
                                     </p>
                                 </div>
                             </div>                      
@@ -118,17 +118,18 @@ const Hero = () => {
                        
                         <div className="flex w-full h-full items-end">
                             <div className="w-full flex items-end pl-28 pt-1">                          
-                                <div className="flex z-10 w-[50%] ">
+                                <div className="flex z-10 w-[60%] ">
                                     <div className="flex flex-col p-10">
                                         <div className="flex">
                                             <h3 className='w-full font-ibm text-lg font-[400] text-purple-500 tracking-widest'>
                                             <span className='text-electro-300 mr-2'>{'['}</span>
-                                            Hire me
+                                            "Hire me"
                                             <span className='text-electro-300 ml-2'>{']'}</span>                        
                                         </h3> 
                                         </div>
-                                        <p className='w-full text-zinc-400 uppercase font-ibm font-[400] mt-2'>
-                                            I'm open for freelance and permanent role opportunities where I can seamlessly bridge design & code.
+                                        <p className='w-full text-zinc-400 text-[1.05rem] font-ibm font-[400] mt-2'>
+                                            I'm open for freelance & permanent role opportunities where I can seamlessly
+                                            bridge design & code.
                                             <br/>
                                             Let's create something cool!
                                         </p>

@@ -138,8 +138,8 @@ const Hero = () => {
                                             <Link to='contact' className="group relative inline-flex h-[calc(36px+8px)] items-center 
                                                 justify-center  py-1 pl-6 pr-20 text-[1.2rem] font-[400] text-electro-300
                                                 border-[1.5px] border-dotted border-purple-400 mt-4"
-                                                smooth={true} 
-                                                duration={500}
+                                                // smooth={true} 
+                                                // duration={500}
                                             >
                                                 <span className="z-10 pr-2">contact me</span>
                                                 <div className="absolute right-1 inline-flex h-8 w-12 items-center justify-end  

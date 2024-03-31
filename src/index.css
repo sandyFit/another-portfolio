@@ -11,20 +11,30 @@
 
 
 
-@keyframes textReveal {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-  
+/* CSS for the email text animation */
+@keyframes fadeInOut {
+  0% { opacity: 0; } /* Adjust the ending opacity to not fully disappear */
+  50% { opacity: 1; }
+  100% { opacity: 0.05; }
 }
 
 .revealText {
-  animation: textReveal 6s ease;
+  animation: fadeInOut 2s ease-in-out forwards;
 }
+
+/* CSS for "Copied" text visibility */
+.copiedTextVisible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+.copiedTextHidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s ease-in-out; /* Delay hiding until after fade */
+}
+
 
 /* =============== RANDOM LETTER REVEAL ================ */
 .letter-container span {

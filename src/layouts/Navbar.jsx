@@ -6,9 +6,12 @@ const Navbar = () => {
         <nav className='flex items-center w-[96%] max-w-full h-[50px] fixed top-6 left-8 bg-slate-950 z-50 
             hover:text-zinc-900 border-[.5px] border-dotted border-purple-400'> 
             <div className="flex w-full justify-between items-center mx-8">
-                <p className='text-electro-300 font-ibm text-lg font-[300] uppercase tracking-widest'>
-                    <ScrollLink to="hero" >trish ramos</ScrollLink>
-                </p>
+                <div className="flex w-[52%] items-center">
+                    <div className="flex w-2 h-4 bg-purple-600 mr-3"></div>
+                    <p className='text-electro-300 font-ibm text-lg font-[300] uppercase tracking-widest'>
+                        <ScrollLink to="hero" >trish ramos</ScrollLink>
+                    </p>
+                </div>
                 <div className="relative w-[40%]">
                     <div className='flex justify-center items-center'>           
                         <ul className='w-full flex justify-between items-center bg-transparent'> 

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
-import {CgArrowTopRight } from "react-icons/cg";
-import Logo from '../../components/ui/Logo';
-import { BsSun, BsMoon, BsChevronBarDown, BsChevronCompactDown, BsChevronDown } from "react-icons/bs";
-import { FaCircle, FaMoon } from "react-icons/fa";
-import { BsChevronDoubleDown } from "react-icons/bs";
+import {
+    BsSun, BsMoon,
+    BsChevronDown
+} from "react-icons/bs";
+import "transition-style";
+
 
 
 const Hero = () => {
@@ -58,6 +59,7 @@ const Hero = () => {
             id="hero"
             className="w-full h-screen flex flex-col justify-between bg-slate-950 relative"
         >    
+            
             <div className="flex justify-between w-full relative">
                 <div className="flex absolute top-36 left-32">
                     <h3 className='font-ibm text-lg font-[400] text-purple-500'>
@@ -128,10 +130,11 @@ const Hero = () => {
                                         </h3> 
                                         </div>
                                         <p className='w-full text-zinc-400 text-[1.05rem] font-ibm font-[400] mt-2'>
-                                            I'm open for freelance & permanent role opportunities where I can seamlessly
-                                            bridge design & code.
+                                            Eager to blend design & code to uniquely elevate brands. Open for collabs, gigs 
+                                            & permanent roles.
+                                            
                                             <br/>
-                                            Let's create something cool!
+                                            Let's create cool stuff that stand out!
                                         </p>
                                         
                                         <div className="flex uppercase tracking-[.28rem]">
@@ -141,7 +144,7 @@ const Hero = () => {
                                                 // smooth={true} 
                                                 // duration={500}
                                             >
-                                                <span className="z-10 pr-2">contact me</span>
+                                                <span className="z-10 pr-2">let's talk</span>
                                                 <div className="absolute right-1 inline-flex h-8 w-12 items-center justify-end  
                                                     bg-purple-800 transition-[width] group-hover:w-[calc(100%-8px)]">
                                                     <div className="mr-3.5 flex items-center justify-center">

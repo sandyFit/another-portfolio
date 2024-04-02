@@ -79,6 +79,7 @@ export default {
         gugi: ["Gugi", 'sans-serif'],
         prosto: ["Prosto On", 'sans-serif'],
         arya: ["Arya", 'sans-serif'],
+        robotoSerif: ["Roboto Serif", 'serif'],
         chivo: ["Chivo Mono", 'monospace'],
         magra: ["Pragati Narrow", 'sans-serif'],
         spaceGrotesk: ["Space Grotesk", 'sans-serif'],

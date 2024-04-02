@@ -8,7 +8,7 @@ const Navbar = () => {
             <div className="flex w-full justify-between items-center mx-8">
                 <div className="flex w-[52%] items-center">
                     <div className="flex w-2 h-4 bg-purple-600 mr-3"></div>
-                    <p className='text-electro-300 font-ibm text-lg font-[300] uppercase tracking-widest'>
+                    <p className='text-electro-200 font-ibm text-lg font-[300] uppercase tracking-widest'>
                         <ScrollLink to="hero" >trish ramos</ScrollLink>
                     </p>
                 </div>
@@ -16,19 +16,19 @@ const Navbar = () => {
                     <div className='flex justify-center items-center'>           
                         <ul className='w-full flex justify-between items-center bg-transparent'> 
                             {['about', 'projects', 'playground', 'resume'].map((item, index) => (
-                                <li className='text-electro-300 font-ibm text-[1rem] font-[300] 
+                                <li className='text-electro-200 font-ibm text-[1rem] font-[300] 
                                 px-2 uppercase tracking-widest flipOnHover'
                                     key={index}
                                     
                                 >
-                                    <ScrollLink to={item} smooth={true} duration={500} offset={item === 'about' ? -78 : 0}>
+                                    <ScrollLink to={item} smooth={true} duration={500} >
                                         {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
                                     </ScrollLink>
                                 </li>
                             ))}
 
                             <ScrollLink to='contact' smooth={true} duration={500}>
-                                <button className="text-electro-300 font-ibm text-[1rem] font-[300]
+                                <button className="text-electro-200 font-ibm text-[1rem] font-[300]
                                 uppercase tracking-widest flipOnHover px-2">                                                                
                                     get in touch                                                                   
                                 </button>

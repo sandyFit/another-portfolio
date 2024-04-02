@@ -63,17 +63,17 @@ const Hero = () => {
             <div className="flex justify-between w-full relative">
                 <div className="flex absolute top-36 left-32">
                     <h3 className='font-ibm text-lg font-[400] text-purple-500'>
-                        <span className='text-electro-300'>{'<'}</span>
+                        <span className='text-electro-200'>{'<'}</span>
                         creative
-                        <span className='text-electro-300'>{'/>'}</span>
+                        <span className='text-electro-200'>{'/>'}</span>
                         
                     </h3>
                 </div>
                 <div className="flex flex-col items-end w-[20%] mt-28 pr-6 absolute left-[93.5rem] ">
                     <h3 className='font-ibm text-lg font-[400] text-purple-500'>
-                        <span className='text-electro-300'>{'<'}</span>
+                        <span className='text-electro-200'>{'<'}</span>
                         timezone
-                        <span className='text-electro-300'>{'/>'}</span>
+                        <span className='text-electro-200'>{'/>'}</span>
                         
                     </h3>
                     <div className='w-full text-zinc-400 uppercase font-ibm font-[400] text-right'
@@ -90,7 +90,7 @@ const Hero = () => {
                         <p className="font-ibm uppercase text-[11rem] text-zinc-300 font-[400] ">
                             designer
                         </p>
-                        <p className="font-ibm uppercase text-[11rem] text-electro-300 font-[400] ml-[26rem] 
+                        <p className="font-ibm uppercase text-[11rem] text-electro-200 font-[400] ml-[26rem] 
                             mt-[-7rem]">
                             & developer_
                         </p>
@@ -103,9 +103,9 @@ const Hero = () => {
                                     <div className="flex">
                                         
                                         <h3 className='w-full font-ibm text-lg font-[400] text-purple-500 tracking-widest'>
-                                            <span className='text-electro-300 mr-2'>{'['}</span>
+                                            <span className='text-electro-200 mr-2'>{'['}</span>
                                             "Hello, World!"
-                                            <span className='text-electro-300 ml-2'>{']'}</span>                        
+                                            <span className='text-electro-200 ml-2'>{']'}</span>                        
                                         </h3>  
                                     </div>
                                     <p className='w-full text-zinc-400 text-[1.05rem] font-ibm font-[400] mt-2'>
@@ -124,9 +124,9 @@ const Hero = () => {
                                     <div className="flex flex-col p-10">
                                         <div className="flex">
                                             <h3 className='w-full font-ibm text-lg font-[400] text-purple-500 tracking-widest'>
-                                            <span className='text-electro-300 mr-2'>{'['}</span>
+                                            <span className='text-electro-200 mr-2'>{'['}</span>
                                             "Hire me"
-                                            <span className='text-electro-300 ml-2'>{']'}</span>                        
+                                            <span className='text-electro-200 ml-2'>{']'}</span>                        
                                         </h3> 
                                         </div>
                                         <p className='w-full text-zinc-400 text-[1.05rem] font-ibm font-[400] mt-2'>
@@ -139,7 +139,7 @@ const Hero = () => {
                                         
                                         <div className="flex uppercase tracking-[.28rem]">
                                             <Link to='contact' className="group relative inline-flex h-[calc(36px+8px)] items-center 
-                                                justify-center  py-1 pl-6 pr-20 text-[1.2rem] font-[400] text-electro-300
+                                                justify-center  py-1 pl-6 pr-20 text-[1.2rem] font-[400] text-electro-200
                                                 border-[1.5px] border-dotted border-purple-400 mt-4"
                                                 // smooth={true} 
                                                 // duration={500}
@@ -167,16 +167,17 @@ const Hero = () => {
                 <article className="w-full h-full flex justify-between items-center relative bottom-3">
                     <div className="flex w-full ml-24">
                         <hr className="absolute bottom-20 left-[4.1rem] w-20 border-t-[1px] border-dashed 
-                            border-electro-300 rotate-90"/>
+                            border-electro-200 rotate-90"/>
                         <BsChevronDown style={{color: '#2ef938', fontSize: '1.2rem', margin: '5px 5px 0 0'}}/>
-                        <h3 className='w-full font-ibm text-lg font-[400] text-purple-500'>
-                            {/* <span className='text-electro-300 mr-1'>{'<'}</span> */}
-                            scroll to explore
-                            <span className='text-electro-300 ml-1'>{'/>'}</span>                        
-                        </h3>  
+                        <Link to={'about'} smooth={true} duration={500} 
+                            className='w-full font-ibm text-lg font-[400] text-purple-500'>
+                            {/* <span className='text-electro-200 mr-1'>{'<'}</span> */}
+                             scroll to explore
+                            <span className='text-electro-200 ml-1'>{'/>'}</span>                        
+                        </Link>  
                     </div>      
                     
-                    <button className="w-full flex text-3xl text-electro-300 mr-6"
+                    <button className="w-full flex text-3xl text-electro-200 mr-6"
                         onClick={handleClick}
                     >
                         {isClicked ? (
@@ -184,10 +185,10 @@ const Hero = () => {
                                     <div className='w-[23%] font-ibm text-lg font-[400] text-purple-500
                                         flex justify-center'>
                                         
-                                        <span className='text-electro-300 mr-2'>{'<'}</span>
+                                        <span className='text-electro-200 mr-2'>{'<'}</span>
                                         <BsMoon style={{margin: '5px 5px 0 2px', fontSize: '18px', color: 'd4d4d8'}}/>
                                     shade on
-                                    <span className='text-electro-300 ml-1'>{'/>'}</span>                         
+                                    <span className='text-electro-200 ml-1'>{'/>'}</span>                         
                                 </div>                                 
                             </div> 
                         ) : (
@@ -195,10 +196,10 @@ const Hero = () => {
                                     <div className='w-[23%] font-ibm text-lg font-[400] text-purple-500
                                         flex justify-center'>
                                         
-                                        <span className='text-electro-300 mr-2'>{'<'}</span>
+                                        <span className='text-electro-200 mr-2'>{'<'}</span>
                                         <BsSun style={{margin: '5px 5px 0 2px', fontSize: '18px', color: 'd4d4d8'}}/>
                                     shine on
-                                    <span className='text-electro-300 ml-1'>{'/>'}</span>                         
+                                    <span className='text-electro-200 ml-1'>{'/>'}</span>                         
                                 </div>                                 
                             </div> 
                         )}

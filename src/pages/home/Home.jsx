@@ -1,14 +1,13 @@
 import React from 'react'
-import Hero from './Hero'
-import About from './About'
+import Test from './Test'
 
-import Project from './Project'
 
 const Home = () => {
     return (
         <section>
-             <Hero />
-            <About />
+            <Test />
+            {/* <TransitionBg/>
+            <About /> */}
             {/* <Project/> */}
             
         </section>

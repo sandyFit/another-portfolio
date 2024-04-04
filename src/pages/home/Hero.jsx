@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-scroll';
-import {
-    BsSun, BsMoon,
-    BsChevronDown
-} from "react-icons/bs";
-import "transition-style";
-
+import { useNavigate } from 'react-router-dom';
 
 
 const Hero = () => {
 
     const [isClicked, setIsCkicked] = useState(false);    
     const [currentTime, setCurrentTime] = useState('');
+    const navigate = useNavigate();
+
+    // Navigates to the contact page
+    const handleNavigation = () => navigate('/contact');
+
 
     const handleClick = () => {
         setIsCkicked(!isClicked);
@@ -64,7 +63,7 @@ const Hero = () => {
                 <div className="flex absolute top-36 left-32">
                     <h3 className='font-ibm text-lg font-[400] text-purple-500'>
                         <span className='text-electro-200'>{'<'}</span>
-                        creative
+                        web
                         <span className='text-electro-200'>{'/>'}</span>
                         
                     </h3>
@@ -87,16 +86,16 @@ const Hero = () => {
             <div className="flex flex-col w-full h-full ">
                 <article className="flex flex-col justify-between w-full h-full ">
                     <div className="w-full flex flex-col justify-center items-start mt-32 pl-32">
-                        <p className="font-ibm uppercase text-[11rem] text-zinc-300 font-[400] ">
+                        <p className="font-ibm uppercase text-[10.5rem] text-zinc-300">
                             designer
                         </p>
-                        <p className="font-ibm uppercase text-[11rem] text-electro-200 font-[400] ml-[26rem] 
+                        <p className="font-ibm uppercase text-[10.5rem] text-electro-200 ml-[30rem] 
                             mt-[-7rem]">
                             & developer_
                         </p>
                     </div>
                                       
-                    <div className="flex w-full justify-between" >                             
+                    <div className="flex w-full justify-between pb-20" >                             
                         <div className="flex w-full flex-col pl-72 z-10">
                             <div className="flex w-[60%] ">
                                 <div className="flex  flex-col px-10">
@@ -108,10 +107,10 @@ const Hero = () => {
                                             <span className='text-electro-200 ml-2'>{']'}</span>                        
                                         </h3>  
                                     </div>
-                                    <p className='w-full text-zinc-400 text-[1.05rem] font-ibm font-[400] mt-2'>
-                                        I'm Trish Ramos, your go-to creative developer from Colombia.
+                                    <p className='w-full text-zinc-400 text-[1.05rem] font-ibm font-[400] mt-2 uppercase'>
+                                        I'm Trish Ramos, a web developer from Colombia.
                                         <br/>
-                                        Building web wonders that are engaging, responsive & secure.<br /> 
+                                        Eager to build web wonders that are engaging, responsive & secure.<br /> 
                                         Serving kind souls globally.
                                     </p>
                                 </div>
@@ -129,33 +128,32 @@ const Hero = () => {
                                             <span className='text-electro-200 ml-2'>{']'}</span>                        
                                         </h3> 
                                         </div>
-                                        <p className='w-full text-zinc-400 text-[1.05rem] font-ibm font-[400] mt-2'>
-                                            Eager to blend design & code to uniquely elevate brands. Open for collabs, gigs 
-                                            & permanent roles.
+                                        <p className='w-full text-zinc-400 text-[1.05rem] font-ibm font-[400] mt-2 uppercase'>
+                                            Aiming to uniquely uplift brands, blending design & code.<br/>
+                                            Open to collabs, projects & roles.
                                             
                                             <br/>
                                             Let's create cool stuff that stand out!
                                         </p>
                                         
-                                        <div className="flex uppercase tracking-[.28rem]">
-                                            <Link to='contact' className="group relative inline-flex h-[calc(36px+8px)] items-center 
-                                                justify-center  py-1 pl-6 pr-20 text-[1.2rem] font-[400] text-electro-200
-                                                border-[1.5px] border-dotted border-purple-400 mt-4"
-                                                // smooth={true} 
-                                                // duration={500}
-                                            >
-                                                <span className="z-10 pr-2">let's talk</span>
-                                                <div className="absolute right-1 inline-flex h-8 w-12 items-center justify-end  
-                                                    bg-purple-800 transition-[width] group-hover:w-[calc(100%-8px)]">
-                                                    <div className="mr-3.5 flex items-center justify-center">
-                                                        <svg width="15" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-elctro-300">
-                                                            <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd">
-                                                            </path>
-                                                        </svg>
-                                                    </div>
-                                                </div>                                
-                                            </Link>
-                                        </div>
+                                        
+                                        <button className="group relative  h-[calc(36px+8px)] items-center 
+                                            justify-center  py-1 pl-6 pr-20 text-[1.2rem] font-[400] text-electro-200
+                                            border-[1.5px] border-dotted border-purple-400 mt-4 flex uppercase tracking-[.28rem]"
+                                            onClick={handleNavigation}
+                                        >
+                                            <span className="z-10 pr-2">let's talk</span>
+                                            <div className="absolute right-1 inline-flex h-8 w-12 items-center justify-end  
+                                                bg-purple-800 transition-[width] group-hover:w-[calc(100%-8px)]">
+                                                <div className="mr-3.5 flex items-center justify-center">
+                                                    <svg width="15" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-elctro-300">
+                                                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                            </div>                                
+                                        </button>
+                                        
                                     </div>                                   
                                 </div>          
                                                           
@@ -164,49 +162,23 @@ const Hero = () => {
                     </div>                                            
                 </article>                
                 
-                <article className="w-full h-full flex justify-between items-center relative bottom-3">
-                    <div className="flex w-full ml-24">
-                        <hr className="absolute bottom-20 left-[4.1rem] w-20 border-t-[1px] border-dashed 
-                            border-electro-200 rotate-90"/>
-                        <BsChevronDown style={{color: '#2ef938', fontSize: '1.2rem', margin: '5px 5px 0 0'}}/>
+
+            </div>           
+                {/* <article className="w-full h-full flex justify-self-end">                    
+
+                    <div className="flex w-full">                      
                         <Link to={'about'} smooth={true} duration={500} 
                             className='w-full font-ibm text-lg font-[400] text-purple-500'>
-                            {/* <span className='text-electro-200 mr-1'>{'<'}</span> */}
-                             scroll to explore
-                            <span className='text-electro-200 ml-1'>{'/>'}</span>                        
+                            <span className='text-electro-200 mr-1'>{'<'}</span>
+                             explore my work
+                            <span className='text-electro-200 ml-1'>{'/'}</span>     
+                            
+                        <BsChevronDoubleRight style={{color: '#2ef938', fontSize: '1.2rem', margin: '0px 5px 0 0'}}/>
                         </Link>  
                     </div>      
                     
-                    <button className="w-full flex text-3xl text-electro-200 mr-6"
-                        onClick={handleClick}
-                    >
-                        {isClicked ? (
-                            <div className="flex justify-end items-end w-full relative ">
-                                    <div className='w-[23%] font-ibm text-lg font-[400] text-purple-500
-                                        flex justify-center'>
-                                        
-                                        <span className='text-electro-200 mr-2'>{'<'}</span>
-                                        <BsMoon style={{margin: '5px 5px 0 2px', fontSize: '18px', color: 'd4d4d8'}}/>
-                                    shade on
-                                    <span className='text-electro-200 ml-1'>{'/>'}</span>                         
-                                </div>                                 
-                            </div> 
-                        ) : (
-                            <div className="flex justify-end items-end w-full relative">
-                                    <div className='w-[23%] font-ibm text-lg font-[400] text-purple-500
-                                        flex justify-center'>
-                                        
-                                        <span className='text-electro-200 mr-2'>{'<'}</span>
-                                        <BsSun style={{margin: '5px 5px 0 2px', fontSize: '18px', color: 'd4d4d8'}}/>
-                                    shine on
-                                    <span className='text-electro-200 ml-1'>{'/>'}</span>                         
-                                </div>                                 
-                            </div> 
-                        )}
-                    </button> 
-                </article>   
-
-            </div>           
+                    
+                </article>    */}
         </section>
     );
 };

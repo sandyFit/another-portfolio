@@ -1,41 +1,43 @@
 import React from 'react'
-import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
+
+
     return (                      
-        <nav className='flex items-center w-[96%] max-w-full h-[50px] fixed top-6 left-8 bg-slate-950 z-50 
+        <nav className='flex items-center w-[96%] max-w-full h-[50px] fixed top-6 left-8 bg-slate-700 z-50 bg-opacity-50
             hover:text-zinc-900 border-[.5px] border-dotted border-purple-400'> 
             <div className="flex w-full justify-between items-center mx-8">
-                <div className="flex w-[52%] items-center">
+                <div className="flex w-[30%] items-center">
                     <div className="flex w-2 h-4 bg-purple-600 mr-3"></div>
                     <p className='text-electro-200 font-ibm text-lg font-[300] uppercase tracking-widest'>
-                        <ScrollLink to="hero" >trish ramos</ScrollLink>
+                        <Link to="/" >trish ramos</Link>
                     </p>
                 </div>
-                <div className="relative w-[40%]">
-                    <div className='flex justify-center items-center'>           
+
+                <div className="relative w-[30%]">
+                    <div className='flex w-full justify-between center items-center'>           
                         <ul className='w-full flex justify-between items-center bg-transparent'> 
-                            {['about', 'projects', 'playground', 'resume'].map((item, index) => (
+                            {['about', 'projects', 'resume', 'contact'].map((item, index) => (
                                 <li className='text-electro-200 font-ibm text-[1rem] font-[300] 
                                 px-2 uppercase tracking-widest flipOnHover'
                                     key={index}
                                     
                                 >
-                                    <ScrollLink to={item} smooth={true} duration={500} >
+                                    <Link to={item}>
                                         {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
-                                    </ScrollLink>
+                                    </Link>
                                 </li>
                             ))}
 
-                            <ScrollLink to='contact' smooth={true} duration={500}>
-                                <button className="text-electro-200 font-ibm text-[1rem] font-[300]
-                                uppercase tracking-widest flipOnHover px-2">                                                                
-                                    get in touch                                                                   
-                                </button>
-                            </ScrollLink>
+                            
+
                         </ul>          
                     </div>
-                </div>                                  
+                </div>  
+                
+                
             </div>
         </nav>
         

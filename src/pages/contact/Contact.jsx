@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { FaCircle, FaCopyright, FaHeart } from 'react-icons/fa';
-import { BsArrowBarUp, BsArrowUp, BsCheck, BsCheckCircle, BsChevronDoubleUp, BsChevronUp, BsEmojiSmile } from 'react-icons/bs';
-import { Link as ScrollLink } from 'react-scroll';
+import { FaCopyright, FaHeart } from 'react-icons/fa';
+import {  BsCheck, BsEmojiSmile } from 'react-icons/bs';
 
 
-const Footer = () => {
+const Contact = () => {
 
     const [currentTime, setCurrentTime] = useState('');
     const [isClicked, setIsClicked] = useState(false);
@@ -73,7 +72,6 @@ const Footer = () => {
             return () => clearInterval(intervalId);
         
     }, [])
-    
 
     return (
         <section id='contact' className='w-full h-screen bg-slate-950 flex flex-col relative'>
@@ -139,14 +137,9 @@ const Footer = () => {
                     </div>
                 </div>   
                                  
-                <ScrollLink to="hero" className="flex flex-col justify-center items-center w-20 h-20 border-[1px] 
-                    border-dotted border-purple-300] relative left-[110rem] bottom-[5rem] text-electro-200 "                         
-                    smooth={true}
-                    duration={500}>
-                        <BsArrowUp style={{margin: '12px 0', padding: '10px 0', fontSize: '3rem'}}/>   
-                </ScrollLink>     
+                   
                                                  
-                <div className="w-full h-full flex flex-col mt-[17rem] pl-32">                        
+                <div className="w-full h-full flex flex-col mt-[21.3rem] pl-32">                        
                     <hr className='w-[96%] border-t-[1px] border-dotted border-purple-400 ' />
                     <div className="w-full flex justify-between">
                         <div className="w-full h-full flex font-ibm uppercase text-zinc-400 mt-5
@@ -176,8 +169,4 @@ const Footer = () => {
     )
 }
 
-export default Footer;
-
-
-
-
+export default Contact

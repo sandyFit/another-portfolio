@@ -83,7 +83,9 @@ export default {
         chivo: ["Chivo Mono", 'monospace'],
         magra: ["Pragati Narrow", 'sans-serif'],
         spaceGrotesk: ["Space Grotesk", 'sans-serif'],
-        ibm: ['IBM Plex Mono', 'monospace']
+        ibm: ['IBM Plex Mono', 'monospace'],
+        
+        
       },
 
       backgroundImage: {

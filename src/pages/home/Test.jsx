@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react';
 import {useNavigate } from 'react-router-dom';
 import {
     BsSun, BsMoon,
-    BsChevronDown
+    BsChevronDown,
+    BsArrowLeft,
+    BsArrowRight
 } from "react-icons/bs";
 import "transition-style";
+import RandomLetterReveal from '../../components/ui/RandomLetterReveal';
 
 
 
@@ -63,12 +66,12 @@ const Test = () => {
             id="hero"
             className="w-full h-screen flex flex-col justify-between bg-slate-950 relative">               
             <div className="flex justify-between w-full relative">               
-                <div className="flex flex-col items-end w-[20%] mt-28 pr-6 absolute left-[93.5rem] ">
-                    <h3 className='font-ibm text-lg font-[400] text-purple-500'>
+                <div className="flex flex-col items-end w-[20%] mt-28 pr-6 absolute left-[94.5rem] ">
+                    {/* <h3 className='font-ibm text-lg font-[400] text-purple-500'>
                         <span className='text-electro-200'>{'<'}</span>
                         timezone
                         <span className='text-electro-200'>{'/>'}</span>                       
-                    </h3>
+                    </h3> */}
                     <div className='w-full text-zinc-400 uppercase font-ibm font-[400] text-right'
                         id='currentTime'
                     >
@@ -78,25 +81,10 @@ const Test = () => {
             </div>    
 
             <div className="flex flex-col w-full h-full ">
-                <article className="flex flex-col justify-between w-full h-full ">
-                    <div className="w-full flex flex-col justify-center items-start h-full relative pl-48 pb-28
-                         ">
-                        <div className="flex justify-start items-center overflow-hidden">
-                            <h2 className='font-ibm uppercase text-[22rem] text-zinc-300 font-[500] 
-                                        tracking-[1px] textSlidingLeft'>WEB</h2>
-                            <div className="flex flex-col justify-start font-ibm uppercase text-[10rem] 
-                                text-purple-500 font-[500] tracking-[4px] mt-6">                               
-                                <h3 className='w-full flex textSlidingRight'>                            
-                                    designer                     
-                                </h3>
-                                <h3 className='w-full flex mt-[-6rem] text-electro-200 textSlidingRight'>
-                                    developer 
-                                </h3>
-                            </div>  
-                        </div>                                      
-                    </div>
+                <article className="flex flex-col justify-between w-full h-full mt-16 pb-3">
+                    
                                       
-                    <div className="flex w-full justify-between mt-[-16rem] pb-16" >                             
+                    {/*<div className="flex w-full justify-between mt-[6rem] pb-16" >                             
                         <div className="flex w-full flex-col pl-72 z-10 ">
                             <div className="flex w-[60%] ">
                                 <div className="flex  flex-col px-10">
@@ -118,7 +106,7 @@ const Test = () => {
                             </div>                      
                         </div>
                        
-                        <div className="flex w-full h-full items-end ">
+                         <div className="flex w-full h-full items-end ">
                             <div className="w-full flex items-end pl-28 ">                          
                                 <div className="flex z-10 w-[60%] ">
                                     <div className="flex flex-col p-10">
@@ -162,7 +150,60 @@ const Test = () => {
                                                           
                             </div>
                         </div>    
-                    </div>                                            
+                    </div>     */}
+                    
+                    {/* <div className="w-full flex flex-col justify-center items-start h-full relative pl-8 mt-12
+                         ">
+                        <div className="flex justify-start items-center overflow-hidden">
+                            <h2 className='font-ibm uppercase text-[28rem] text-zinc-300 font-[500] 
+                                        tracking-[-25px] textSlidingLeft'>WEB</h2>
+                            <div className="flex flex-col justify-start font-ibm uppercase text-[12rem] 
+                                text-purple-500 font-[800] tracking-[4px] mt-6 ml-6">                               
+                                <h3 className='w-full flex textSlidingRight'>                            
+                                    designer                     
+                                </h3>
+                                <h3 className='w-full flex mt-[-8rem] text-electro-200 textSlidingRight'>
+                                    developer 
+                                </h3>
+                            </div>  
+                        </div>                                      
+                    </div>   */}
+
+
+                    <div className="w-full flex flex-col justify-center items-start h-full relative pl-12 mt-16
+                         overflow-hidden">
+                        <div className="flex justify-start items-center ">
+                            <h2 className='font-ibm uppercase text-[25rem] text-zinc-400 font-[500] 
+                                        tracking-[1px] textSlidingLeft'>WEB</h2>
+                            <div className="flex flex-col justify-start font-ibm uppercase text-[11rem] 
+                                text-purple-500 font-[600] tracking-[9px] mt-6">                               
+                                <h3 className='w-full flex textSlidingRight'>                            
+                                    designer                     
+                                </h3>
+                                <h3 className='w-full flex mt-[-7rem] text-electro-200 textSlidingRight'>
+                                    developer 
+                                </h3>
+                            </div>  
+                        </div>                                      
+                    </div>
+
+                    <p className='font-ibm text-[2.8rem] font-[400] uppercase text-zinc-400 mt-[-12rem] tracking-wide 
+                        leading-[60px] pl-16 '>
+                        <RandomLetterReveal text={'Building Digital Wonders that are Engaging, Responsive & Secure.'}/>
+                    </p>
+                    <p className='font-ibm text-[2.8rem] font-[400] uppercase text-zinc-400 mt-[1rem] pl-16 leading-[30px]
+                     tracking-wide textSlidingLeft'>
+                        Based in Colombia, Open to Collabs, Gigs & Roles.
+                    </p>
+                    <div className="flex w-full justify-start items-start textSlidingLeft">
+
+                        <button className='font-ibm text-8xl font-[400] uppercase text-electro-200 mt-[2rem] ml-[-6.5rem]'
+                            onClick={handleNavigation}
+                        >
+                            Let's Talk
+                            <BsArrowRight style={{ margin: '-90px 0 0 800px' }} />
+                        </button>
+                    </div>
                 </article>                
                 
                 

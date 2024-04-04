@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
 
+const generateRandomChar = () => {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    return chars.charAt(Math.floor(Math.random() * chars.length));
+};
+
 const RandomLetterReveal = ({ text }) => {
     const [revealedIndices, setRevealedIndices] = useState([]);
+    const [placeholders, setPlaceholders] = useState(Array(text.length).fill('').map(() => generateRandomChar()));
 
     useEffect(() => {
         const characters = text.split('');
@@ -10,6 +16,7 @@ const RandomLetterReveal = ({ text }) => {
 
         const revealLetter = () => {
             if (remainingIndices.length === 0) {
+                clearInterval(intervalId);
                 return;
             }
 
@@ -17,23 +24,31 @@ const RandomLetterReveal = ({ text }) => {
             const selected = remainingIndices[randomIndex];
 
             setRevealedIndices((current) => [...current, selected]);
-
             remainingIndices = remainingIndices.filter((_, index) => index !== randomIndex);
         };
 
-        const intervalId = setInterval(revealLetter, 100); // Adjust timing as needed
+        const updatePlaceholders = () => {
+            setPlaceholders(placeholders.map((_, index) => 
+                revealedIndices.includes(index) ? text.charAt(index) : generateRandomChar()
+            ));
+        };
+
+        const intervalId = setInterval(() => {
+            revealLetter();
+            updatePlaceholders();
+        }, 5); // Adjust timing as needed
 
         return () => clearInterval(intervalId);
-        
-    }, [text]); // Effect depends on 'text' prop
+
+    }, [text, revealedIndices]); // Effect depends on 'text' and 'revealedIndices'
 
     return (
         <div className="letter-container">
-        {text.split('').map((char, index) => (
-            <span key={index} className={revealedIndices.includes(index) ? 'revealed' : 'hidden'}>
-            {char}
-            </span>
-        ))}
+            {placeholders.map((char, index) => (
+                <span key={index} className={revealedIndices.includes(index) ? 'revealed' : 'hidden'}>
+                    {char}
+                </span>
+            ))}
         </div>
     );
 };

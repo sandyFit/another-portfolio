@@ -7,7 +7,7 @@ const App = () => {
     return (
         <section>
             <Navbar />
-            <Sidebar/>
+            {/* <Sidebar/> */}
             <Outlet />
 
         </section>

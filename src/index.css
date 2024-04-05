@@ -233,10 +233,10 @@
     }
 
     .active-link {
-    @apply text-electro-300;
-  }
+      @apply text-electro-300;
+    }
     .active-link::after {
-        @apply content-[''] bg-purple-600 h-[3px] w-[0%] left-0 top-[50%] rounded-xl absolute duration-500
+        @apply content-[''] bg-zinc-300 h-[3px] w-[0%] left-0 top-[50%] rounded-xl absolute duration-500
     }
 
     .active-link::after {

@@ -60,13 +60,13 @@ const Hero = () => {
                                                
 
                         <div className="w-full flex items-end ">                          
-                            <div className="flex z-10 w-[100%] justify-end items-end">                                                                                                    
-                                <div className="flex w-full ml-36 textSlidingLeft">
+                            <div className="flex z-10 w-fulljustify-end items-end">                                                                                                    
+                                <div className="flex w-full ml-60 textSlidingLeft">
                                     <button className='font-ibm text-7xl font-[400] uppercase text-purple-600'
                                         onClick={handleNavigation}
                                     >
-                                        <span>Let's Talk</span> 
-                                        <BsArrowRight style={{ margin: '-70px 15px 0 560px' }} />
+                                        <span>reach out</span> 
+                                        <BsArrowRight style={{ margin: '-70px 15px 0 500px' }} />
                                     </button>
                                     
                                 </div>                                  

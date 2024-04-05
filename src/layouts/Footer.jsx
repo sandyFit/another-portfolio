@@ -79,6 +79,7 @@ const Footer = () => {
                         <span className='lowercase text-electro-200 ml-2'>hello@trishramos.com</span>.<br/>                       
                         Let's explore opportunities to collaborate & create web wonders together. <br/>                    
                         Thanks for stopping by.
+                        
                     </p>
 
                     

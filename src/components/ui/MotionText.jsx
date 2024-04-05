@@ -3,25 +3,24 @@ import React from 'react';
 
 
 const MotionText = ({ icon, text1, text2, text3}) => {
-  const repetitions = Array(4).fill(null);
+  const repetitions = Array(6).fill(null);
 
   return (
-        <div className="w-full h-full z-10 flex items-center py-2 border-t-[1.5px] border-b-[1.5px] border-dashed 
-            border-purple-400"
+        <div className="w-full h-full z-10 flex items-center bg-slate-800 py-1"
             style={{ overflow: 'hidden'}}>
-            <h2 className=' motion-text font-ibm text-[3rem] font-[500] tracking-wider uppercase'>
+            <h2 className=' motion-text font-ibm text-[2rem] font-[500] tracking-wider uppercase'>
                 <div style={{ display: 'flex', whiteSpace: 'nowrap' }}>
                     {repetitions.map((_, index) => (
                         <React.Fragment key={index}>
-                            <span  style={{color: '#f2f2f2'}}>
+                            <span className='mx-20 text-zinc-300 text-[1.8rem] mt-2'>
                                 {icon}
                             </span>
-                            <span className='text-purple-600 mx-6' >{text1}</span>
+                            <span className='text-purple-600' >{text1}</span>
+                            <span className='mx-20 text-zinc-300  text-[1.8rem] mt-2'>
+                                {icon}
+                            </span>
+                            <span className='text-electro-300' >{text2}</span>
                             {/* <span  style={{color: '#f2f2f2'}}>
-                                {icon}
-                            </span>
-                            <span className='text-emerald-400 mx-6' >{text2}</span>
-                            <span  style={{color: '#f2f2f2'}}>
                                 {icon}
                             </span>
                             <span className='text-emerald-400 mx-6' >{text3}</span> */}

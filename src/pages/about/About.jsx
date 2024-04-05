@@ -57,7 +57,8 @@ const About = () => {
                             the perfect blend of meaningful aesthetics and function.       
                             <br/><br/>
                                                     
-                            <p className='font-ibm text-6xl text-zinc-400 uppercase tracking-widest mt-4 mb-12'>
+                            <p className='font-ibm text-4xl text-zinc-400 uppercase tracking-widest mt-4 
+                                mb-12'>
                             I'm currently on the lookout for full-time roles or freelance gigs
                             that challenge my skills and stoke my passion for design and development.
                             </p>

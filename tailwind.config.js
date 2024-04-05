@@ -21,6 +21,10 @@ export default {
           950: '#151226'
         },
 
+        plomo: {
+          600: '#181830'
+        },
+
         skyIceRgba: {
           300: '#7c5dec99'
         },

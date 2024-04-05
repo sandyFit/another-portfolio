@@ -42,7 +42,7 @@
 @keyframes fadeInOut {
   0% { opacity: 0; } /* Adjust the ending opacity to not fully disappear */
   50% { opacity: 1; }
-  100% { opacity: 0.05; }
+  100% { opacity: 0.5; }
 }
 
 .revealText {

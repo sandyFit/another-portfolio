@@ -21,10 +21,11 @@ const MotionText = ({ icon, text1, text2, text3, className}) => {
                                 {icon}
                             </span>
                             <span className='text-zinc-400' >{text2}</span>
-                            {/* <span  style={{color: '#f2f2f2'}}>
+                            <span className='mx-20 text-purple-600  text-[1.8rem] mt-2'>
                                 {icon}
                             </span>
-                            <span className='text-emerald-400 mx-6' >{text3}</span> */}
+                            <span className='text-zinc-400' >{text3}</span>
+
                         </React.Fragment>
                     ))}
                 </div>

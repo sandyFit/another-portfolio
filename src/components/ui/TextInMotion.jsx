@@ -1,37 +1,48 @@
 import React from 'react'
 
-const TextInMotion = ({icon, text}) => {
+const TextInMotion = ({icon, text1, text2, text3, text4, text5, text6}) => {
     
-    const repetitions = Array(10).fill(null);
+    const repetitions = Array(6).fill(null);
 
-    return (
-        <div className="text-slider-container font-syne text-2xl z-10" style={{ overflow: 'hidden' }}>
-        <h2 className='text-center motion-text font-regular tracking-wider'>
-            <div 
-                    className='bg-skyIce bg-opacity-60 h-24 grid place-items-center border-2 border-t-lime-300 
-                    border-b-neutral-300'
-                >
-                    <div style={{ display: 'flex', whiteSpace: 'nowrap' }}>
-
-                        {repetitions.map((_, index) => (
-                            <React.Fragment key={index}>
-                            <span style={{ color: '#bef264', margin: '0 5rem', fontSize: '3rem' }}>
+  return (
+      <div className="w-full h-full z-10 flex items-center bg-slate-800 py-1 border-t-2 border-b-2
+            border-dotted border-zinc-300"
+            style={{ overflow: 'hidden'}}>
+            <h2 className=' motion-text font-ibm text-[2rem] font-[500] tracking-wider uppercase'>
+                <div style={{ display: 'flex', whiteSpace: 'nowrap' }}>
+                    {repetitions.map((_, index) => (
+                        <React.Fragment key={index}>
+                            <span className='mx-20 text-purple-600 text-[1.8rem] mt-2'>
                                 {icon}
                             </span>
-                                
-                            <span className=' font-inter font-semibold '
-                                style={{ margin: '0 1rem', color: '#bef264', fontSize: '3rem' }}>
-                                {text}
+                            <span className='text-zinc-400' >{text1}</span>
+                            <span className='mx-20 text-purple-600  text-[1.8rem] mt-2'>
+                                {icon}
                             </span>
-                            
-                            
-                            </React.Fragment>
-                        ))}
-                    </div>
-            </div>
-        </h2>
-        </div>
-    );
+                            <span className='text-zinc-400' >{text2}</span>
+                            <span className='mx-20 text-purple-600  text-[1.8rem] mt-2'>
+                                {icon}
+                            </span>
+                            <span className='text-zinc-400' >{text3}</span>
+                            <span className='mx-20 text-purple-600  text-[1.8rem] mt-2'>
+                                {icon}
+                            </span>
+                            <span className='text-zinc-400' >{text4}</span>
+                            <span className='mx-20 text-purple-600  text-[1.8rem] mt-2'>
+                                {icon}
+                            </span>
+                            <span className='text-zinc-400' >{text5}</span>
+                            <span className='mx-20 text-purple-600  text-[1.8rem] mt-2'>
+                                {icon}
+                            </span>
+                            <span className='text-zinc-400' >{text6}</span>
+
+                        </React.Fragment>
+                    ))}
+                </div>
+            </h2>
+    </div>
+  )
     
 }
 

@@ -42,9 +42,8 @@ const TimeZone = () => {
         <article>
             
             <div className='w-full text-zinc-400 uppercase font-ibm font-[400] text-right'
-                id='currentTime'
-            >
-                Bogota gmt-5 <br /> <span className='tracking-wider'>{currentTime}</span>
+                id='currentTime'>
+                <span className='tracking-wider mr-2'>{currentTime}</span>gmt-5 
             </div>
         </article>
     )

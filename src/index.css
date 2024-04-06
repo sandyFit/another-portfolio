@@ -41,8 +41,8 @@
 /* === CSS FOR EMAIL FLASHING ANIMATION IN CONTACT SECTION === */
 @keyframes fadeInOut {
   0% { opacity: 0; } /* Adjust the ending opacity to not fully disappear */
-  50% { opacity: 1; }
-  100% { opacity: 0.5; }
+ 
+  100% { opacity: 1; }
 }
 
 .revealText {
@@ -53,7 +53,7 @@
 .copiedTextVisible {
   visibility: visible;
   opacity: 1;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 5s ease-in-out;
 }
 
 .copiedTextHidden {
@@ -190,16 +190,69 @@
 ::-webkit-scrollbar {
   width: 10px;
 }
-/* =========== EDGE BROWSER =========== */
-/* Changing the scrollbar width */
-/* html {
-  scrollbar-width: thin;
+
+
+/* =========== LINK ANIMATION REACH OUT HERO =========== */
+
+.button {
+  display: flex;
+  flex-direction: column;
+  font-size: 5rem; /* Adjusted font size */
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #9333ea; /* Example purple, replace with your class or variable */
+  width: 100%;
+  position: relative; /* Ensure positioning context for absolute children */
+  overflow: hidden; /* Hide parts of the text that move outside the button */
+  cursor: pointer; /* Optional: Changes the cursor on hover */
 }
 
-/* Changing the scrollbar color (thumb and track) */
-/*html {
-  scrollbar-color: #888 #f1f1f1;
-} */
+
+.textContainer {
+  position: relative;
+  height: 1.3em; /* Adjust based on your font size to fit one line of text */
+  white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+.text {
+  display: block;
+  position: absolute;
+  width: 100%;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+.firstText {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.secondText {
+  transform: translateY(100%);
+}
+
+.button:hover .firstText {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.button:hover .secondText {
+  color: #a1a1aa;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.icon {
+ 
+  color: #9333ea;
+  font-size: 5rem;
+}
+
+.button:hover .icon {
+  color: #a1a1aa;
+}
+
 
 
 
@@ -243,6 +296,7 @@
         @apply w-[100%] 
     }
 
+    
     
 
 }

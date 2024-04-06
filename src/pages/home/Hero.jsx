@@ -60,15 +60,17 @@ const Hero = () => {
                                                
 
                         <div className="w-full flex items-end ">                          
-                            <div className="flex z-10 w-fulljustify-end items-end">                                                                                                    
-                                <div className="flex w-full ml-60 textSlidingLeft">
-                                    <button className='font-ibm text-7xl font-[400] uppercase text-purple-600'
-                                        onClick={handleNavigation}
-                                    >
-                                        <span>reach out</span> 
-                                        <BsArrowRight style={{ margin: '-70px 15px 0 500px' }} />
-                                    </button>
-                                    
+                            <div className="flex z-10 w-full justify-end items-end">                                                                                                    
+                                <div className="flex w-full ml-60 justify-center items-center">
+                                    <button className='button' onClick={handleNavigation}>
+                                        <div className="textContainer">
+                                            <span className="text firstText">Reach out</span>
+                                            <span className="text secondText">Reach out</span>
+                                        </div>
+                                        
+                                        <BsArrowRight
+                                            className='absolute top-8 right-4' />
+                                    </button>    
                                 </div>                                  
                             </div>                                                                 
                         </div>                            

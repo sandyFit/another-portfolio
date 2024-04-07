@@ -7,28 +7,34 @@ import FeatureParagraph from '../../components/features/FeatureParagraph';
 import MotionText from '../../components/ui/MotionText';
 import TextInMotion from '../../components/ui/TextInMotion';
 const About = () => {
-    
-    const [isSticky, setIsSticky] = useState(false);
 
+    const [isSticky, setIsSticky] = useState(false);
+    // Define a state for opacity
+    const [opacity, setOpacity] = useState(1);
+    
     const handleScroll = () => {
         const currentScrollPosition = window.scrollY;
-        const stickyThreshold = 2550;
+        const stickyThreshold = 1000;
+        const fadeThreshold = 300; // Adjust this value as needed
 
-        setIsSticky(currentScrollPosition < stickyThreshold)
-    }
+        setIsSticky(currentScrollPosition < stickyThreshold);
+
+        // Determine the opacity based on the scroll position.
+        // This creates a fade effect when scrolling close to the stickyThreshold.
+        const opacityValue = Math.max(0, 1 - (currentScrollPosition - (stickyThreshold - fadeThreshold)) / fadeThreshold);
+        setOpacity(opacityValue);
+    };
 
     useEffect(() => {
-        handleScroll();
-
         window.addEventListener('scroll', handleScroll);
-
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [])
+    }, []);
+
 
     return (        
         <section
             id="about"
-            className="w-full min-h-screen flex flex-col justify-between bg-plum-600 relative ">        
+            className="w-full min-h-screen flex flex-col justify-between bg-plum-600 relative text-ibm">        
             
             <div className="flex w-full relative">               
                 <div className="flex flex-col items-end w-[20%] mt-28 fixed left-[95rem] ">
@@ -38,7 +44,8 @@ const About = () => {
            
             <div className="flex flex-col justify-start items-start relative">
 
-                <div className={`flex flex-col ${isSticky ? 'fixed' : 'absolute'} top-56 left-28 gap-8`}>
+                <div style={{ opacity: opacity }}
+                    className={`flex flex-col ${isSticky ? 'fixed' : 'absolute'} top-56 left-28 gap-8`}>
                     <div className="flex flex-col z-50">
 
                         <h2 className='w-full font-ibm text-[2.1rem] uppercase text-zinc-300 font-[300] 
@@ -52,7 +59,7 @@ const About = () => {
                        
                     </div>
 
-                    <div className="w-[40%] flex flex-col justify-start items-start h-full ">                                              
+                    <div className="w-[40%] flex flex-col justify-start items-start h-full textSiliding Left">                                              
                         <div className="flex border-[4rem] border-electro-200 ">
 
                             <div className="flex w-[320px] h-[340px]">
@@ -65,16 +72,15 @@ const About = () => {
                 
 
                 <div className="flex flex-col w-full items-end h-full mt-56 ">                                                        
-                    <div className="flex flex-col w-[68%] pl-44 pr-40">
+                    <div className="flex flex-col w-[68%] pl-44 pr-48">
                         
-                        <h2 className='w-full fontTitle uppercase text-[11rem] text-zinc-300 font-[500] 
+                        <h2 className='w-full fontTitle uppercase text-[10rem] text-zinc-300 font-[500] 
                             tracking-[2px] mt-24'>
                             who i
                             <span className='text-purple-500 ml-16'>am</span>
                         </h2>
                                                    
                         <FeatureParagraph>       
-
                             I'm a graphic designer at heart. Driven by my fascination for all                            
                             things digital, I embarked on a self-taught journey to expand my                                
                             expertise into web development, with a keen focus on the artistry of frontend design.                                          
@@ -83,16 +89,13 @@ const About = () => {
                         <FeatureParagraph>   
                             Today, I stand as a creative developer, blending the worlds of                              
                             design and code.<br/><br/>
-                            This journey has not only broadened my skill set but also solidified my commitment to
-                            build digital products that are the perfect blend of meaningful aesthetics and function.
-                            <br /><br />
                         </FeatureParagraph>   
                         <FeatureParagraph>       
                             I'm currently on the lookout for  full-time roles or
                             freelance gigs that challenge my skills and stoke my passion for design and development.
                             Fell free to reach out here
                             <Link to={'/contact'}>
-                                <BsArrowUpRight className='relative bottom-[3.5rem] left-[15rem] text-electro-300' />
+                                <BsArrowUpRight className='relative bottom-[2.5rem] left-[20.5rem] text-electro-300' />
                             </Link>                       
                         </FeatureParagraph>
                         <FeatureParagraph> 
@@ -101,16 +104,18 @@ const About = () => {
                             channeling my quirky side through drawing.                                                         
                          </FeatureParagraph>
 
-                        <h2 className='w-full fontTitle uppercase text-[11rem] text-zinc-300 font-[500] 
-                            tracking-[-5px] mt-24 '>
-                            my
-                            <span className='text-purple-500 ml-24'>skills</span>
-                        </h2>                                              
+                                                                    
                     </div>
                 </div>
 
-                <div className="flex relative mt-80 ">
-                    <div className="flex rotate-6 absolute ">
+                <h2 className='w-full fontTitle uppercase text-[11rem] text-zinc-300 font-[500] 
+                            tracking-[-5px] mt-36 text-center'>
+                            what i 
+                            <span className='text-purple-500 ml-24'>do</span>
+                        </h2>  
+
+                <div className="w-full flex relative mt-12 ">
+                    <div className="w-full flex rotate-[4deg] ">
                         <MotionText
                             icon={<BsAsterisk className='rotating-icon'/>}
                             text1={'web design'}
@@ -119,7 +124,7 @@ const About = () => {
                             className=''
                         />
                     </div>
-                    <div className="flex -rotate-6 absolute bottom-[44rem]">
+                    <div className="w-full flex -rotate-[4deg] absolute bottom-0">
                         <TextInMotion
                             icon={<BsAsterisk className='rotating-icon'/>}
                             text1={'HTML'}
@@ -130,6 +135,18 @@ const About = () => {
                             text6= {'webflow'}
                             className=''
                         />
+                    </div>
+
+                </div>
+                <div className="w-full flex flex-col justify-center items-center mt-36 px-56">
+                    <FeatureParagraph>
+                        Transitioning from design to creative development has not only broadened my skill set but also solidified my commitment 
+                        to build digital products that are the perfect blend of meaningful aesthetics and function.
+                    </FeatureParagraph>
+                    <div className="flex justify-start items-start mt-20">
+                        <h2 className='text-6xl text-purple-600 font-[400] uppercase '>
+                            My core tools
+                        </h2>
                     </div>
                 </div>
 

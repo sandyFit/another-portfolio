@@ -6,30 +6,24 @@ import TimeZone from '../../components/ui/TimeZone';
 import FeatureParagraph from '../../components/features/FeatureParagraph';
 import MotionText from '../../components/ui/MotionText';
 import TextInMotion from '../../components/ui/TextInMotion';
+
+
 const About = () => {
 
-    const [isSticky, setIsSticky] = useState(false);
-    // Define a state for opacity
-    const [opacity, setOpacity] = useState(1);
-    
+    const [isFixed, setIsFixed] = useState(false);
+
     const handleScroll = () => {
         const currentScrollPosition = window.scrollY;
-        const stickyThreshold = 1000;
-        const fadeThreshold = 300; // Adjust this value as needed
+        const stickyThreshold = 2000;
 
-        setIsSticky(currentScrollPosition < stickyThreshold);
-
-        // Determine the opacity based on the scroll position.
-        // This creates a fade effect when scrolling close to the stickyThreshold.
-        const opacityValue = Math.max(0, 1 - (currentScrollPosition - (stickyThreshold - fadeThreshold)) / fadeThreshold);
-        setOpacity(opacityValue);
-    };
+        setIsFixed(currentScrollPosition < stickyThreshold);
+    }
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
+        return () => window.removeEventListener('scroll', handleScroll);
+    })
 
     return (        
         <section
@@ -44,8 +38,8 @@ const About = () => {
            
             <div className="flex flex-col justify-start items-start relative">
 
-                <div style={{ opacity: opacity }}
-                    className={`flex flex-col ${isSticky ? 'fixed' : 'absolute'} top-56 left-28 gap-8`}>
+                <div 
+                    className={`flex flex-col fixed top-56 left-28 gap-8 ${isFixed ? 'fixed' : 'absolute'}`}>
                     <div className="flex flex-col z-50">
 
                         <h2 className='w-full font-ibm text-[2.1rem] uppercase text-zinc-300 font-[300] 
@@ -71,7 +65,7 @@ const About = () => {
                 </div>
                 
 
-                <div className="flex flex-col w-full items-end h-full mt-56 ">                                                        
+                <div className="flex flex-col w-full items-end h-full mt-72 mb-40">                                                        
                     <div className="flex flex-col w-[68%] pl-44 pr-48">
                         
                         <h2 className='w-full fontTitle uppercase text-[10rem] text-zinc-300 font-[500] 
@@ -108,48 +102,70 @@ const About = () => {
                     </div>
                 </div>
 
-                <h2 className='w-full fontTitle uppercase text-[11rem] text-zinc-300 font-[500] 
-                            tracking-[-5px] mt-36 text-center'>
-                            what i 
-                            <span className='text-purple-500 ml-24'>do</span>
-                        </h2>  
+                <div className="w-full flex flex-col bg-zinc-400 rounded-[100px] card-container">
+                    <h2 className='w-full fontTitle uppercase text-[11rem] text-plomo-600 font-[500]  
+                                tracking-[-5px] mt-36 text-center'>
+                                what i 
+                                <span className='text-purple-700 ml-24'>do</span>
+                            </h2>  
 
-                <div className="w-full flex relative mt-12 ">
-                    <div className="w-full flex rotate-[4deg] ">
-                        <MotionText
-                            icon={<BsAsterisk className='rotating-icon'/>}
-                            text1={'web design'}
-                            text2={'web development'}
-                            text3={'motion'}
-                            className=''
-                        />
-                    </div>
-                    <div className="w-full flex -rotate-[4deg] absolute bottom-0">
-                        <TextInMotion
-                            icon={<BsAsterisk className='rotating-icon'/>}
-                            text1={'HTML'}
-                            text2={'CSS'}
-                            text3={'JAVASCRIPT'}
-                            text4={'react'}
-                            text5={'node js'}
-                            text6= {'webflow'}
-                            className=''
-                        />
+                    <div className="w-full flex relative  ">
+                        <div className="w-full flex rotate-[4deg] ">
+                            <MotionText
+                                icon={<BsAsterisk className='rotating-icon'/>}
+                                text1={'web design'}
+                                text2={'web development'}
+                                text3={'motion'}
+                            />
+                        </div>
+                        <div className="w-full flex -rotate-[4deg] absolute bottom-0">
+                            <TextInMotion
+                                icon={<BsAsterisk className='rotating-icon'/>}
+                                text1={'HTML'}
+                                text2={'CSS'}
+                                text3={'JAVASCRIPT'}
+                                text4={'react'}
+                                text5={'node js'}
+                                text6= {'webflow'}
+                            />
+                        </div>
                     </div>
 
+                    <div className="w-full flex flex-col justify-center items-center mt-36 px-56">
+                        <FeatureParagraph>
+                            Transitioning from design to creative development has not only broadened my skill set but also solidified my commitment 
+                            to build digital products that are the perfect blend of meaningful aesthetics and function.
+                        </FeatureParagraph>
+                        <div className="flex justify-start items-start mt-20">
+                            <h2 className='text-6xl text-purple-600 font-[400] uppercase '>
+                                My core tools
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div className="w-full flex flex-col justify-center items-center">
+                        <div className="card">
+                            <h2>Web Design</h2>
+
+                        </div>
+                        <div className="card">
+                            <h2>Web Development</h2>
+
+                        </div>
+                        <div className="card">
+                            <h2>Motion Design</h2>
+
+                        </div>
+
+                    </div>
                 </div>
-                <div className="w-full flex flex-col justify-center items-center mt-36 px-56">
-                    <FeatureParagraph>
-                        Transitioning from design to creative development has not only broadened my skill set but also solidified my commitment 
-                        to build digital products that are the perfect blend of meaningful aesthetics and function.
-                    </FeatureParagraph>
-                    <div className="flex justify-start items-start mt-20">
-                        <h2 className='text-6xl text-purple-600 font-[400] uppercase '>
-                            My core tools
-                        </h2>
-                    </div>
-                </div>
 
+                <div className="w-full h-full flex justify-center bg-plomo-600">                                        
+                    <h2 className='w-full fontTitle uppercase text-[11rem] text-zinc-300 font-[500]  
+                        tracking-[-5px] mt-36 text-center'>
+                        What they say about me
+                    </h2>
+                </div>
 
                 <div className="w-full h-full flex flex-col pt-[5.8rem]">                        
                     <Footer/>

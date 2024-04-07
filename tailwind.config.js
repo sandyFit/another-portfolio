@@ -22,6 +22,7 @@ export default {
         },
 
         plomo: {
+          200: '#8d8df7',
           600: '#181830'
         },
 

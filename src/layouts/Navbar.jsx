@@ -12,12 +12,12 @@ const Navbar = () => {
     }, [location]);
 
     return (                      
-        <nav className='flex items-center w-[99.5%] max-w-full h-[50px] left-1 fixed top-6 py-7 bg-plomo-600 z-50 
+        <nav className='flex items-center w-[99.5%] max-w-full h-[50px] left-1 fixed top-6 py-7 bg-zinc-900 z-50 
             bg-opacity-90 border-2 border-dotted border-zinc-300'> 
             <div className="flex w-full justify-between items-center">
-                <div className="flex w-[14%] items-center bg-purple-700 justify-end pr-10 py-2">
-                    <div className="flex w-2 h-4 bg-electro-300 mr-3"></div>
-                    <p className='text-zinc-300 font-ibm text-[1.5rem] font-[500] uppercase tracking-widest'>
+                <div className="flex w-[14%] items-center bg-salmon-400 justify-end pr-10 py-2">
+                    <div className="flex w-2 h-4 bg-zinc-900 mr-3"></div>
+                    <p className='text-zinc-900 font-ibm text-[1.5rem] font-[500] uppercase tracking-widest'>
                         <Link to="/">trish ramos</Link>
                     </p>
                 </div>

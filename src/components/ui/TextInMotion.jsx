@@ -1,41 +1,45 @@
 import React from 'react'
 
-const TextInMotion = ({icon, text1, text2, text3, text4, text5, text6}) => {
+const TextInMotion = ({icon, text1, text2, text3, text4, text5, text6, text7}) => {
     
     const repetitions = Array(6).fill(null);
 
   return (
-      <div className="w-full h-full z-10 flex items-center bg-slate-800 py-1 border-t-2 border-b-2
-            border-dotted border-zinc-300"
+      <div className="w-full h-full z-10 flex items-center bg-zinc-300 py-1 border-t-2 border-b-2
+            border-dotted border-zinc-900"
             style={{ overflow: 'hidden'}}>
-            <h2 className=' motion-text font-ibm text-[2rem] font-[500] tracking-wider uppercase'>
+            <h2 className=' motion-text font-ibm text-[4rem] font-[500] tracking-wider uppercase'>
                 <div style={{ display: 'flex', whiteSpace: 'nowrap' }}>
                     {repetitions.map((_, index) => (
                         <React.Fragment key={index}>
-                            <span className='mx-20 text-electro-200 text-[1.8rem] mt-2'>
+                            <span className='mx-20 text-zinc-500 text-[2.8rem] mt-7'>
                                 {icon}
                             </span>
-                            <span className='text-zinc-400' >{text1}</span>
-                            <span className='mx-20 text-electro-200  text-[1.8rem] mt-2'>
+                            <span className='text-zinc-900' >{text1}</span>
+                            <span className='mx-20 text-zinc-500  text-[2.8rem] mt-7'>
                                 {icon}
                             </span>
-                            <span className='text-zinc-400' >{text2}</span>
-                            <span className='mx-20 text-electro-200  text-[1.8rem] mt-2'>
+                            <span className='text-zinc-900' >{text2}</span>
+                            <span className='mx-20 text-zinc-500  text-[2.8rem] mt-7'>
                                 {icon}
                             </span>
-                            <span className='text-zinc-400' >{text3}</span>
-                            <span className='mx-20 text-electro-200  text-[1.8rem] mt-2'>
+                            <span className='text-zinc-900' >{text3}</span>
+                            <span className='mx-20 text-zinc-500  text-[2.8rem] mt-7'>
                                 {icon}
                             </span>
-                            <span className='text-zinc-400' >{text4}</span>
-                            <span className='mx-20 text-electro-200  text-[1.8rem] mt-2'>
+                            <span className='text-zinc-900' >{text4}</span>
+                            <span className='mx-20 text-zinc-500  text-[2.8rem] mt-7'>
                                 {icon}
                             </span>
-                            <span className='text-zinc-400' >{text5}</span>
-                            <span className='mx-20 text-electro-200  text-[1.8rem] mt-2'>
+                            <span className='text-zinc-900' >{text5}</span>
+                            <span className='mx-20 text-zinc-500  text-[2.8rem] mt-7'>
                                 {icon}
                             </span>
-                            <span className='text-zinc-400' >{text6}</span>
+                            <span className='text-zinc-900' >{text6}</span>
+                            <span className='mx-20 text-zinc-500  text-[2.8rem] mt-7'>
+                                {icon}
+                            </span>
+                            <span className='text-zinc-900' >{text7}</span>
 
                         </React.Fragment>
                     ))}

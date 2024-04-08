@@ -39,7 +39,7 @@ const Contact = () => {
   
 
     return (
-        <section id='contact' className='w-full h-screen bg-plomo-600 flex flex-col relative'>
+        <section id='contact' className='w-full h-screen flex flex-col relative'>
             {/* Content */}
 
             <div className="flex w-full relative">               
@@ -54,7 +54,7 @@ const Contact = () => {
                     <h1 className='w-full text-center font-ibm uppercase text-[2.8rem] text-zinc-500 font-[400] 
                         tracking-[2px] flex gap-6'>
                         <span className='textSlidingLeft'>Caught Your Eye?</span> 
-                        <span><BsEmojiWink style={{ fontSize: '2rem', marginTop: '1.1rem' }}/></span> —
+                        <span><BsEmojiWink style={{ fontSize: '2rem', marginTop: '1.1rem', color: '#ff637f' }}/></span> —
                         <span className='textSlidingRight'>feel free to reach out</span>
                     </h1>
                 </div>
@@ -62,16 +62,16 @@ const Contact = () => {
                 <div className="flex mt-16 ml-72">
                     <a  href='mailto:sandy07r@gmail.com'
                         className="w-[30%] flex text-ibm uppercase tracking-wider flex-col ml-28 relative">
-                        <span className=' text-[5rem] text-purple-500'><BsEnvelope /></span>
+                        <span className=' text-[5rem] text-salmon-400'><BsEnvelope /></span>
                         <h3 className='text-8xl text-zinc-300 font-[500]'>drop an email</h3>
-                        <span className='absolute left-[19rem] top-48 text-[5rem] text-electro-300'>
+                        <span className='absolute left-[19rem] top-48 text-[5rem] text-salmon-400'>
                             <BsArrowUpRight />
                         </span>
                     </a>
 
                     <div className="w-[25%] flex text-ibm text-8xl font-[500] text-zinc-300 uppercase tracking-wide pt-20
                         relative">
-                        <article className='flex justify-evenly items-center h-[26%] text-purple-600 
+                        <article className='flex justify-evenly items-center h-[26%] text-salmon-400 
                         gap-8 relative left-[16.38rem] -top-16'>
                         
                             <div className="flex ">
@@ -95,7 +95,7 @@ const Contact = () => {
 
                         <div className="flex relative">
                             <h3>follow trish</h3>
-                            <span className='text-[5rem] font-[600] absolute bottom-0 left-72 text-electro-300'>
+                            <span className='text-[5rem] font-[600] absolute bottom-0 left-72 text-salmon-400'>
                                 <BsArrowUpRight /></span>
                         </div>
                     </div>
@@ -109,7 +109,7 @@ const Contact = () => {
                         hello@trishramos.com
                     </p>
                     {showCopiedText && (
-                        <h3 className={`flex font-ibm text-lg font-[400] text-purple-500 tracking-widest gap-1 
+                        <h3 className={`flex font-ibm text-lg font-[400] text-salmon-400 tracking-widest gap-1 
                             absolute
                             ${showCopiedText ? 'copiedTextVisible' : 'copiedTextHidden'}`}>
                             Copied <BsCheck style={{fontSize: '2rem', color: '#2ef938'}}/>
@@ -117,7 +117,7 @@ const Contact = () => {
                     )}
                 </button>
                                                  
-                <div className="w-full h-full flex flex-col pt-[5.8rem]">                        
+                <div className="w-full h-full flex flex-col pt-[6rem]">                        
                     <Footer/>
                 </div>
             </div> 

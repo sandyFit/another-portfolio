@@ -200,7 +200,7 @@
   font-size: 5rem; /* Adjusted font size */
   font-weight: 500;
   text-transform: uppercase;
-  color: #9333ea; /* Example purple, replace with your class or variable */
+  color: #ff637f; /* Example purple, replace with your class or variable */
   width: 100%;
   position: relative; /* Ensure positioning context for absolute children */
   overflow: hidden; /* Hide parts of the text that move outside the button */
@@ -244,8 +244,7 @@
 }
 
 .icon {
- 
-  color: #9333ea;
+  color: #ff637f;
   font-size: 5rem;
 }
 
@@ -261,25 +260,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: relative; /* Added to establish a stacking context */
+  padding-bottom: 100vh; /* Ensure there's enough space to scroll and see the sticky effect */
   z-index: 10;
+
   
 }
 .card {
-  width: 100%;
-  height: 100vh;
+  width: 80%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top:  1px dotted #d4d4d8;
   position: sticky;
-  top: 250px;
+  top: 100px;
   z-index: 20;
+  padding: 3rem 4rem 8rem 6rem;
+  margin: 8rem 0; /* Add some space between cards */
 }
 
+/* Adjust the top values based on your design needs */
+.card:nth-child(1) {
+  top: 80px; 
+}
 
-.card:last-child {
-  margin-bottom: 100vh; /* Adjust based on your needs */
+.card:nth-child(2) {
+  top: 220px; 
+}
+
+.card:nth-child(3) {
+  top: 370px; 
+  
 }
 
 
@@ -310,20 +321,42 @@
 
 /* =========== LINKS HOVER BACKGROUND-FILLING ANIMATION ============ */
 .fillOnHover:hover {
-  box-shadow: inset 200px 0 0 0 #7e22ce;
+  box-shadow: inset 200px 0 0 0 #ff637f;
   color: #d4d4d4;
   font-weight: 500;
 }
-/* ======================= */
 
+
+/* =========== GRAINY BG ============ */
+
+.custom-bg {
+  width: 460px;
+  height: 500px;
+  background: 
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  filter: contrast(180%) brightness(600%);
+  background-size: cover;
+  background-position: center;
+}
+
+.container-bg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #f7778e, rgba(0, 0, 0, 0)), 
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  filter: contrast(180%) brightness(100%);
+  background-size: cover;
+  background-position: center;
+}
 
 
 @layer base {
     html, body {
-        @apply w-full h-full box-border  m-0 p-0 bg-skyIce-900;
+        @apply w-full h-full box-border  m-0 p-0 bg-zinc-900;
     }
-
-    
 
     a {
       @apply cursor-pointer
@@ -334,18 +367,26 @@
 
   /* ============== NAVBAR LINKS ANIMATION =============== */
   .nav-link {
-        @apply relative tracking-[1px] hover:text-electro-300
+        @apply relative tracking-[1px] hover:text-salmon-400
     }
 
     .active-link {
-      @apply text-electro-300;
+      @apply text-salmon-400;
     }
     .active-link::after {
-        @apply content-[''] bg-zinc-300 h-[3px] w-[0%] left-0 top-[50%] rounded-xl absolute duration-500
+        @apply content-[''] bg-zinc-300 h-[2px] w-[0%] left-0 top-[50%] -rotate-[10deg] rounded-xl absolute duration-500
     }
 
     .active-link::after {
         @apply w-[100%] 
+    }
+
+    .about-title {                             
+      @apply w-full fontTitle uppercase text-[4rem] text-zinc-900 font-[900] mb-12
+    }
+
+    .about-text {                             
+      @apply w-full font-ibm text-[2.2rem] font-[300] text-zinc-900 tracking-wider leading-tight
     }
 
     

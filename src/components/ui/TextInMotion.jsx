@@ -5,7 +5,7 @@ const TextInMotion = ({icon, text1, text2, text3, text4, text5, text6, text7}) =
     const repetitions = Array(6).fill(null);
 
   return (
-      <div className="w-full h-full z-10 flex items-center bg-zinc-300 py-1 border-t-2 border-b-2
+      <div className="w-full h-full z-10 flex items-center bg-zinc-300 py-1 border-t-[3px] border-b-[3px]
             border-dotted border-zinc-900"
             style={{ overflow: 'hidden'}}>
             <h2 className=' motion-text font-ibm text-[4rem] font-[500] tracking-wider uppercase'>

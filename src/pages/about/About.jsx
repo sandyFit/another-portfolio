@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { BsArrowUpRight, BsAsterisk} from 'react-icons/bs';
+import { BsArrowUp, BsArrowUpRight, BsAsterisk} from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import Footer from '../../layouts/Footer';
 import TimeZone from '../../components/ui/TimeZone';
 import FeatureParagraph from '../../components/features/FeatureParagraph';
 import TextInMotion from '../../components/ui/TextInMotion';
 import ContactBtn from '../../components/ui/ContactBtn';
+import { Link as ScrollLink } from 'react-scroll';
 
 
 const About = () => {
@@ -54,15 +55,10 @@ const About = () => {
                     </div>
 
                     <div className="w-[40%] flex flex-col justify-start items-start h-full textSlidingLeft">                                              
-                        <div className="flex w-[460px] h-[500px] justify-center items-center border-2 border-dotted 
-                        border-zinc-900  relative bg-zinc-300">
-                            
-                            {/* New wrapper div for padding*/}
-                            <div className="flex justify-center items-center w-full h-full p-4 bg-zinc-300">
-                                <div className="flex w-[320px] h-[340px] z-20 absolute">
-                                    <img src="/me-bn.png" alt="Trish Avatar"/>
-                                </div>
-                            </div>
+                        <div className="flex w-[460px] h-[500px] justify-center items-center relative custom-bg">
+                            <div className="flex w-[320px] h-[340px] z-20 absolute">
+                                <img src="/me-bn.png" alt="Trish Avatar"/>
+                            </div>                       
                         </div>                       
                     </div>
                 </div>
@@ -105,133 +101,157 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className="w-full flex flex-col justify-center items-center bg-salmon-400 rounded-[60px] mt-32
-                    card-container">
+                <div className="w-full flex flex-col justify-center items-center bg-zinc-900 border-t-[1px] 
+                    border-dotted border-zinc-300 mt-32 card-container">
 
-                    <div className="flex justify-center items-center pr-12 py-28 relative">
+                    <div className="flex justify-center items-center pr-12 pt-28 relative">
 
-                        <h2 className='flex items-center justify-center w-full fontTitle uppercase text-[8rem] text-zinc-300 font-[900]  
-                            tracking-[-5px]'> 
+                        <h2 className='flex items-center justify-center w-full fontTitle uppercase text-[8rem] text-zinc-300 
+                            font-[900] tracking-[-5px]'> 
                             what i 
-                            <span className='text-zinc-900 ml-8'>do</span>
+                            <span className='text-salmon-400 ml-8'>do</span>
                         </h2>
   
 
-                        <p className='w-full font-ibm text-[2.2rem] font-[300] text-zinc-900 tracking-wider
+                        <p className='w-full font-ibm text-[2.2rem] font-[300] text-zinc-400 tracking-wider
                              leading-tight'>
                             Transitioning from design to creative development has solidified my commitment 
                             to build digital products that are the perfect blend of meaningful aesthetics and function.
                         </p>
                         
                     </div>
-                    {/* <hr className='w-full border-t-[1px] border-dotted border-zinc-900 pt-4' /> */}
 
                     <div className="w-full flex flex-col justify-center items-center relative">
-                        <div className="card bg-zinc-300 border-2 border-dotted border-zinc-900 flex justify-start 
+                        <div className="card bg-zinc-900 flex justify-start border-t-[1px] border-dotted border-zinc-300
                             items-start relative">
-                            <BsAsterisk className='rotating-icon text-3xl text-zinc-500 absolute top-20 right-[90.5rem]'/>
-                            <h2 className='about-title'>
-                                Web Design
-                            </h2>
-                            <p className='about-text'>
-                                Intentional design begins with a deep comprehension of a business's purpose, followed by
-                                an imaginative leap to craft a digital experience that people loves.
-                            </p>
 
-                            <div className="flex mt-9 gap-16">
-                                <div className="flex bg-zinc-300 px-6 py-2 border-2 border-dotted border-zinc-900">
-                                    <div className="flex text-ibm text-zinc-900 text-2xl uppercase font-[400]">
-                                        <p>Responsive Design</p>
-                                    </div>
-                                </div>
-                                <div className="flex bg-zinc-300 px-6 py-2 border-2 border-dotted border-zinc-900">
-                                    <div className="flex text-ibm text-zinc-900 text-2xl uppercase font-[400]">
-                                        <p>Wireframing</p>
-                                    </div>
-                                </div>
-                                <div className="flex bg-zinc-300 px-6 py-2 border-2 border-dotted border-zinc-900">
-                                    <div className="flex text-ibm text-zinc-900 text-2xl uppercase font-[400]">
-                                        <p>Prototyping</p>
-                                    </div>
-                                </div>
+                            <BsAsterisk className='rotating-icon text-3xl text-zinc-300 absolute top-[4.4rem] left-12'/>
+                            <h2 className='about-title text-zinc-300 z-10'> 
+                                web 
+                                <span className='about-title text-salmon-400 ml-8'>design</span>
+                            </h2>
+                            
+
+                            <div className="flex gap-32 relative">
+
+                                <p className='about-text'>
+                                    Intentional design begins with a deep comprehension of a business's purpose, followed by
+                                    an imaginative leap that helps me craft digital experience that people loves.
+                                </p>
+
+                                <div className="flex text-[25rem] text-zinc-800 font-[700] absolute left-[80rem]">
+                                    01</div>
+
+                                <ul className="w-[60%] flex flex-col gap-6 mt-20 z-20">                                   
+                                    <li className="services-list">
+                                        — Responsive Design
+                                    </li>
+                                                               
+                                    <li className="services-list">
+                                        — Wireframing
+                                    </li>
+                                                                
+                                    <li className="services-list">
+                                        — Prototyping
+                                    </li>
+                                    
+                                </ul>
                             </div>
 
                         </div>
-                        <div className="card bg-zinc-300 border-2 border-dotted border-zinc-900 flex justify-start 
+                    <div className="w-full flex flex-col justify-center items-center relative z-20">
+                        
+                        <div className="card bg-zinc-900 flex justify-start border-t-[1px] border-dotted border-zinc-300
                             items-start relative">
-                            <BsAsterisk className='rotating-icon text-3xl text-zinc-500 absolute top-20 right-[90.5rem]'/>
-                            <h2 className='about-title'> 
-                                Web Development
+
+                            <BsAsterisk className='rotating-icon text-3xl text-zinc-300 absolute top-[4.4rem] left-12'/>
+                            <h2 className='about-title text-zinc-300'> 
+                                web 
+                                <span className='about-title text-salmon-400 ml-8'>development</span>
                             </h2>
                             
-                            <p className='about-text'>
-                                I craft bespoke websites that resonate with your brand identity.
-                                My approach emphasizes scalability, performance, accessibility, and captivating animations,
-                                ensuring a standout and memorable online presence.
-                            </p>
-                            
-                            <div className="flex mt-9 gap-16">
-                                <div className="flex bg-zinc-300 px-6 py-2 border-2 border-dotted border-zinc-900">
-                                    <div className="flex text-ibm text-zinc-900 text-2xl uppercase font-[400]">
-                                        <p>Frontend development</p>
-                                    </div>
-                                </div>
-                                <div className="flex bg-zinc-300 px-6 py-2 border-2 border-dotted border-zinc-900">
-                                    <div className="flex text-ibm text-zinc-900 text-2xl uppercase font-[400]">
-                                        <p>On-page seo</p>
-                                    </div>
-                                </div>
-                                <div className="flex bg-zinc-300 px-6 py-2 border-2 border-dotted border-zinc-900">
-                                    <div className="flex text-ibm text-zinc-900 text-2xl uppercase font-[400]">
-                                        <p>CMS integrations</p>
-                                    </div>
-                                </div>                               
+
+                            <div className="flex gap-32 relative">
+
+                                <p className='about-text'>
+                                    I craft bespoke websites that resonate with your brand identity.
+                                    My approach emphasizes scalability, performance, accessibility, and captivating animations,
+                                    ensuring a standout and memorable online presence.
+                                </p>
+
+                                <div className="flex text-[25rem] text-zinc-800 bg-opacity-60 font-[700] absolute left-[80rem]">
+                                    02</div>
+
+                                <ul className="w-[60%] flex flex-col gap-6 mt-20 z-20">                                   
+                                    <li className="services-list">
+                                        — Frontend Development
+                                    </li>
+                                                               
+                                    <li className="services-list">
+                                        — on-page SEO
+                                    </li>
+                                                                
+                                    <li className="services-list">
+                                        — CMS integrations
+                                    </li>
+                                    
+                                </ul>
                             </div>
+                        
                         </div>
 
-                        <div className="card bg-zinc-300 border-2 border-dotted border-zinc-900 flex justify-start 
-                            items-start relative">
-                            <BsAsterisk className='rotating-icon text-3xl text-zinc-500 absolute top-20 right-[90.5rem]'/>
-                            <h2 className='about-title'> 
-                                Motion Design
-                            </h2>
-                            <p className='about-text'>
-                                Transitioning from design to creative development has solidified my commitment 
-                                to build digital products that are the perfect blend of meaningful aesthetics and function.
-                            </p>
+                        <div className="card bg-zinc-900 flex justify-start border-t-[1px] border-dotted border-zinc-300
+                            items-start relative z-30">
 
-                            <div className="flex mt-9 gap-16">
-                                <div className="flex bg-zinc-300 px-6 py-2 border-2 border-dotted border-zinc-900">
-                                    <div className="flex text-ibm text-zinc-900 text-2xl uppercase font-[400]">
-                                        <p>Animations</p>
-                                    </div>
-                                </div>
-                                <div className="flex bg-zinc-300 px-6 py-2 border-2 border-dotted border-zinc-900">
-                                    <div className="flex text-ibm text-zinc-900 text-2xl uppercase font-[400]">
-                                        <p>micro-interactions</p>
-                                    </div>
-                                </div>
-                                <div className="flex bg-zinc-300 px-6 py-2 border-2 border-dotted border-zinc-900">
-                                    <div className="flex text-ibm text-zinc-900 text-2xl uppercase font-[400]">
-                                        <p>transitions</p>
-                                    </div>
-                                </div>
+                            <BsAsterisk className='rotating-icon text-3xl text-zinc-300 absolute top-[4.4rem] left-12'/>
+                            <h2 className='about-title text-zinc-300'> 
+                                motion 
+                                <span className='about-title text-salmon-400 ml-8'>design</span>
+                            </h2>
+                            
+
+                            <div className="flex gap-32 relative">
+                                <p className='about-text'>
+                                    I craft bespoke websites that resonate with your brand identity.
+                                    My approach emphasizes scalability, performance, accessibility, and captivating animations,
+                                    ensuring a standout and memorable online presence.
+                                </p>
+
+                                <div className="flex text-[25rem] text-zinc-800 bg-opacity-60 font-[700] absolute left-[80rem]">
+                                    03</div>
+
+                                <ul className="w-[60%] flex flex-col gap-6 mt-20 z-20">                                   
+                                    <li className="services-list">
+                                        — Animations
+                                    </li>
+                                                               
+                                    <li className="services-list">
+                                        — micro-interactions
+                                    </li>
+                                                                
+                                    <li className="services-list">
+                                        — transitions
+                                    </li>
+                                    
+                                </ul>
                             </div>
 
-                        </div>      
+                        </div>
                         
-                        <div className="card  flex justify-start items-start relative bg-transparent border-none -z-50"></div>
+                        <div className="card  flex justify-start items-start relative  border-none -z-20 pb-20"></div>
+                       </div> 
                         
-                        <div className="w-full flex flex-col absolute top-[180rem]">
-                            
-                            <div className="flex justify-center items-center pr-12 py-28 relative">
-                                <h2 className='flex items-center justify-center w-full fontTitle uppercase text-[8rem] text-zinc-300 font-[900]  
-                                    tracking-[-5px]'> 
+                        
+                        <div className="w-full flex flex-col absolute top-[210rem] bg-zinc-900 z-50">
+                            <hr className="flex border-t-[1px] border-dotted border-zinc-300" />
+                            <div className="flex justify-center items-center pr-12 py-48 relative">
+                                <h2 className='flex items-center justify-center w-full fontTitle uppercase text-[8rem] 
+                                    text-zinc-300 font-[900] tracking-[-5px]'> 
                                     my 
-                                    <span className='text-zinc-900 ml-8'>tools</span>
+                                    <span className='text-salmon-400 ml-8'>tools</span>
                                 </h2>       
 
-                                <p className='w-full font-ibm text-[2.2rem] font-[300] text-zinc-900 tracking-wider
+                                <p className='w-full font-ibm text-[2.2rem] font-[300] text-zinc-400 tracking-wider
                                     leading-tight'>
                                     There are many tools that can be used for design, animation and web development, 
                                     but I have my favorites that help me craft the best digital experiences. 
@@ -253,7 +273,7 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className="w-full h-[calc[100vh-100px]] flex flex-col mt-32 relative">
+                <div className="w-full h-[calc[100vh-100px]] flex flex-col mt-12 relative">
 
                     <div className="w-full flex px-40">                                        
                         <h2 className='w-full fontTitle uppercase text-[8rem] text-zinc-300 font-[500] 
@@ -263,7 +283,16 @@ const About = () => {
                         </h2>
                     </div>
 
-                    <div className="w-[28%] flex mt-72 mb-24 relative left-[85rem]">
+                    <ScrollLink
+                        to={'about'}
+                        smooth={true}
+                        duration={600}
+                        className="w-[5%] flex border-2 border-dotted border-zinc-300 p-6 
+                        absolute top-72 left-[110rem] ">
+                       <BsArrowUp style={{color: '#ff637f', fontSize: '3rem',}}/>
+                    </ScrollLink>
+
+                    <div className="w-[28%] flex mt-64 mb-24 relative left-[85rem]">
                         <ContactBtn/>
                     </div>
                 </div>              

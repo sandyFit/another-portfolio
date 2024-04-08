@@ -267,31 +267,31 @@
   
 }
 .card {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: sticky;
-  top: 100px;
+  top: 160px;
   z-index: 20;
-  padding: 3rem 4rem 8rem 6rem;
-  margin: 8rem 0; /* Add some space between cards */
+  padding: 3rem 4rem 12rem 6rem;
+  margin: 6rem 0 10rem 0; /* Add some space between cards */
 }
 
 /* Adjust the top values based on your design needs */
-.card:nth-child(1) {
+/* .card:nth-child(1) {
   top: 80px; 
 }
 
 .card:nth-child(2) {
-  top: 220px; 
-}
+  top: 300px; 
+}*/
 
 .card:nth-child(3) {
-  top: 370px; 
+  top: 300px; 
   
-}
+} 
 
 
 /* ============= GLITCH EFFECT =============== */
@@ -332,9 +332,9 @@
 .custom-bg {
   width: 460px;
   height: 500px;
-  background: 
+  background: linear-gradient(to right, #f7778e, rgba(0, 0, 0, 0)), 
     url(https://grainy-gradients.vercel.app/noise.svg);
-  filter: contrast(180%) brightness(600%);
+  filter: contrast(180%) brightness(100%);
   background-size: cover;
   background-position: center;
 }
@@ -382,13 +382,16 @@
     }
 
     .about-title {                             
-      @apply w-full fontTitle uppercase text-[4rem] text-zinc-900 font-[900] mb-12
+      @apply w-full fontTitle uppercase text-[4rem]  font-[900] mb-12
     }
 
     .about-text {                             
-      @apply w-full font-ibm text-[2.2rem] font-[300] text-zinc-900 tracking-wider leading-tight
+      @apply w-[60%] font-ibm text-[2.2rem] font-[300] text-zinc-400 tracking-wider leading-tight
     }
 
+    .services-list {
+      @apply flex font-ibm text-zinc-400 text-6xl capitalize font-[500] tracking-tighter
+    }
     
     
 

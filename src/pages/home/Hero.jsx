@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import TimeZone from '../../components/ui/TimeZone';
 import ContactBtn from '../../components/ui/ContactBtn';
+import GlitchText from '../../components/ui/GlitchText';
 
 
 const Hero = () => {
@@ -11,22 +12,14 @@ const Hero = () => {
         setIsCkicked(!isClicked);
     }
 
-    const GlitchText = ({ text }) => {
-        const chars = text.split("").map((char, index) => (
-            <span key={index} className="glitch">{char}</span>
-        ));
-        
-        return <div>{chars}</div>;
-    };
-
 
         
     return (
          <section
             id="hero"
-            className="w-full h-screen flex flex-col justify-between bg-zinc-900 relative">               
+            className="w-full h-screen flex flex-col justify-between relative">               
                <div className="flex w-full relative">               
-                    <div className="flex flex-col items-end w-[20%] mt-28 absolute left-[95rem] ">
+                    <div className="flex flex-col items-end w-[20%] mt-28 absolute left-[93.5rem] ">
                         <TimeZone/>
                     </div>
                 </div> 
@@ -38,24 +31,28 @@ const Hero = () => {
                         <div className="flex justify-center items-center">
                             
                             <div className="flex flex-col justify-start font-ibm uppercase text-[12rem] 
-                                text-zinc-400 font-[400] tracking-[2px] mt-6">                               
-                                <h3 className='w-full flex textSlidingLeft '>                            
+                                text-zinc-300 font-[400] tracking-[2px] mt-6">                               
+                                <h3 className='w-full flex absolute bottom-64 left-32 textSlidingLeft'>                            
                                     designer                     
                                 </h3>
-                                <h3 className='w-full flex mt-[-8rem] text-salmon-400 textSlidingRight ml-[20rem]'>
-                                    & developer_ 
+                                <h3 className='w-full flex mt-20 text-zinc-900 font-[500]  ml-[20rem]'>
+                                    <span className='mr-20'>&</span> 
+                                     <GlitchText text={'developer_'}
+                                    typingSpeed={160}
+                                /> 
                                 </h3>
                             </div>  
                         </div>                                                                                                     
                     </div>
                                       
-                    <div className="flex w-full justyfy-between items-end pb-4 mt-20" >       
-                        <div className="flex justify-evenly items-end space-x-56">
-                            <div className='w-[55%] font-ibm text-[2rem] font-[400] uppercase text-zinc-400  tracking-widest 
-                                leading-[40px] glitch pl-5'>
+                    <div className="flex w-full justyfy-between items-end pb-6 mt-20" >       
+                        <div className="flex justify-evenly items-end ml-3 space-x-56">
+                            <div className='w-[55%] font-ibm text-[2rem] font-[500] uppercase text-zinc-300  tracking-widest 
+                                leading-[40px] glitch pl-10'>
                                 Building Digital Wonders that are Engaging, Responsive & Secure.
+                               
                             </div>
-                            <p className='w-[45%] font-ibm text-[2rem] font-[400] uppercase text-zinc-400
+                            <p className='w-[45%] font-ibm text-[2rem] font-[500] uppercase text-zinc-300
                                 tracking-widest leading-[40px] pl-5'>
                                 Based in Colombia, Open to Collabs, Gigs & Roles.
                             </p>
@@ -64,9 +61,8 @@ const Hero = () => {
 
                         <div className="w-full flex items-end ">                          
                             <div className="flex z-10 w-full justify-end items-end">                                                                                                    
-                                <div className="flex w-full ml-60 justify-center items-center">
-                                   <ContactBtn/>
-   
+                                <div className="flex w-full ml-[13rem] justify-center items-center">
+                                   <ContactBtn/>  
                                 </div>                                  
                             </div>                                                                 
                         </div>                            

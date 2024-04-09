@@ -1,33 +1,47 @@
 import React, { useEffect, useState } from 'react';
 
-const randomChars = "`!¬~&®#|°^?*¿@µÆØß1234567890»±¥™€░▒▓║╬╣φ≈⌡Φ≤Σε≡±█▄ß";
+const randomCharacters = "!¬~&®#|°¿@µÆØß1237890»™€░▒║╬φΦ≤Σε≡±█▄ß.".split('');
 
-const GlitchText = ({ text, revealTime = 300 }) => {
-  const [displayedText, setDisplayedText] = useState(
-    new Array(text.length).fill(' ').map(() => randomChars[Math.floor(Math.random() * randomChars.length)])
-  );
+const GlitchText = ({ text, revealSpeed = 300 }) => {
+  const [revealedText, setRevealedText] = useState(Array(text.length).fill(' '));
 
   useEffect(() => {
-    const timer = revealTime / text.length;
-    let index = 0;
-
-    const interval = setInterval(() => {
-      if (index < text.length) {
-        setDisplayedText((current) => {
-          const newText = [...current];
-          newText[index] = text[index];
+    const timers = text.split('').map((char, index) => {
+      const isSpace = char === ' ';
+      let timer = setTimeout(() => {
+        setRevealedText((prevText) => {
+          const newText = [...prevText];
+          newText[index] = char;
           return newText;
         });
-        index++;
-      } else {
-        clearInterval(interval);
+      }, index * revealSpeed * (isSpace ? 0.1 : 1)); // Speed up for spaces
+
+      if (!isSpace) {
+        // Before revealing the actual character, we show random characters
+        let interval = setInterval(() => {
+          setRevealedText((prevText) => {
+            const newText = [...prevText];
+            const randomChar = randomCharacters[Math.floor(Math.random() * randomCharacters.length)];
+            newText[index] = randomChar;
+            return newText;
+          });
+        }, revealSpeed / 10); // Update random character at a fraction of the revealSpeed
+
+        // Clear the interval right before revealing the actual character
+        setTimeout(() => clearInterval(interval), (index * revealSpeed * 0.9));
       }
-    }, timer);
 
-    return () => clearInterval(interval);
-  }, [text, revealTime]);
+      return timer;
+    });
 
-  return <p>{displayedText}</p>;
+    return () => timers.forEach(timer => clearTimeout(timer));
+  }, [text, revealSpeed]);
+
+  return (
+    <p>
+      {revealedText.join('')}
+    </p>
+  );
 };
 
 export default GlitchText;

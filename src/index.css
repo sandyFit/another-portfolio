@@ -86,7 +86,7 @@
 }
 
 .textSlidingLeft {
-  animation: slideInTextFromLeft 1s ease-out forwards;
+  animation: slideInTextFromLeft .5s ease-out forwards;
 }
 
 .textSlidingRight {
@@ -200,7 +200,7 @@
   font-size: 5rem; /* Adjusted font size */
   font-weight: 500;
   text-transform: uppercase;
-  color: #ff637f; /* Example purple, replace with your class or variable */
+  color: #18181b; /* Example purple, replace with your class or variable */
   width: 100%;
   position: relative; /* Ensure positioning context for absolute children */
   overflow: hidden; /* Hide parts of the text that move outside the button */
@@ -238,13 +238,13 @@
 }
 
 .button:hover .secondText {
-  color: #a1a1aa;
+  color: #d4d4d8;
   transform: translateY(0);
   opacity: 1;
 }
 
 .icon {
-  color: #ff637f;
+  color: #18181b;
   font-size: 5rem;
 }
 
@@ -255,13 +255,14 @@
 /* =========== CARDS STACKING =========== */
 
 .card-container {
-  width: 100%;
+  width: 96%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative; /* Added to establish a stacking context */
-  padding-bottom: 100vh; /* Ensure there's enough space to scroll and see the sticky effect */
+  padding-bottom: 110vh; /* Ensure there's enough space to scroll and see the sticky effect */
+  margin-bottom: 5rem;
   z-index: 10;
 
   
@@ -321,7 +322,7 @@
 
 /* =========== LINKS HOVER BACKGROUND-FILLING ANIMATION ============ */
 .fillOnHover:hover {
-  box-shadow: inset 200px 0 0 0 #ff637f;
+  box-shadow: inset 200px 0 0 0 #18181b;
   color: #d4d4d4;
   font-weight: 500;
 }
@@ -332,9 +333,9 @@
 .custom-bg {
   width: 460px;
   height: 500px;
-  background: linear-gradient(to right, #f7778e, rgba(0, 0, 0, 0)), 
+  background: linear-gradient(to left, #18181b, rgba(0, 0, 0, 0)), 
     url(https://grainy-gradients.vercel.app/noise.svg);
-  filter: contrast(180%) brightness(100%);
+  filter: contrast(120%) brightness(90%);
   background-size: cover;
   background-position: center;
 }
@@ -345,17 +346,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #f7778e, rgba(0, 0, 0, 0)), 
+  background: linear-gradient(to bottom, #18181b, rgba(0, 0, 0, 0)), 
     url(https://grainy-gradients.vercel.app/noise.svg);
   filter: contrast(180%) brightness(100%);
   background-size: cover;
   background-position: center;
 }
 
+.bg-effect {
+  background-color: #2d3234;
+  background-image: url(https://lh3.googleusercontent.com/_oZpTIImMpQFiKTS4i_-dFaYLELX8v4y7-pYbZmOLjlaFHzMmho9I46KpALrF1RVhYuEZzAOj94zmmlxbyzrJhlVam_G1qqGw09npr4ksMbE6iB0lZVkwUsLGtJ7E6ZWiVAAnIyhF7IyQ-zTf0jYQxTZw6z7NtKBtg3DDaMnnkdbP9ClxFmYvKiRv7qZ0dL8ounAxnaK1YKtq6lU5MiiRAzVWHSiJUqYLuihDTsdkhK_smj5qkMm4dqvcTbs-EGLr4vJFhDUcrJZspo9MgooVJGJcShhMKD1cGcbfr_Y0bA_bqNns7S3_hWXK9CzjYUwUDGrWB14GYgo3V0HrpeYx_WlmV7DlrUdGjE0PK-2Y3cDQEkbGEi9yZNG-BpZI8CxPWM90s4Yo-_D6N_48ZYU4_SOJvmc3K_3Vauig3KPNDPXxN4Xqs58DXH-bAWWUSf7KTdzUnB27hm_mSI9qwz6K8tdzxR_ahtdczraeCgZDo-GyQ9kKfioFa8xapdYCyg1Xw6pr_T5x1pIkfJ2Me5QbHZ9tik4MhhNyCftOgzzcR6IAut4RiiRwbhDJ2hY6e1DFXTGt02XPslw0AdGWh00ryVpVuXDIfWfft9xT9i4-T3Gp6CCPOMfO0Y-hOEXooror0Lox789Q7HW9_9lp_gZrjCdtw1N7ClEQyNU_xi1CA=w264-h36-no);
+  background-size: 10%;
+}
+
+/* ============ glitch effect =========== */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor {
+  animation: blink 1s step-start infinite;
+}
+
+
 
 @layer base {
     html, body {
-        @apply w-full h-full box-border  m-0 p-0 bg-zinc-900;
+        @apply w-full h-full box-border bg-orangi-400 m-0 p-0 ;
     }
 
     a {
@@ -367,14 +386,14 @@
 
   /* ============== NAVBAR LINKS ANIMATION =============== */
   .nav-link {
-        @apply relative tracking-[1px] hover:text-salmon-400
+        @apply relative tracking-[1px] hover:text-zinc-800 font-[500]
     }
 
     .active-link {
-      @apply text-salmon-400;
+      @apply text-zinc-800;
     }
     .active-link::after {
-        @apply content-[''] bg-zinc-300 h-[2px] w-[0%] left-0 top-[50%] -rotate-[10deg] rounded-xl absolute duration-500
+        @apply content-[''] bg-zinc-200 h-[2px] w-[0%] left-0 top-[50%] -rotate-[10deg] rounded-xl absolute duration-500
     }
 
     .active-link::after {
@@ -382,7 +401,7 @@
     }
 
     .about-title {                             
-      @apply w-full fontTitle uppercase text-[4rem]  font-[900] mb-12
+      @apply w-full font-ibm uppercase text-[4rem]  font-[400] mb-12
     }
 
     .about-text {                             
@@ -393,7 +412,7 @@
       @apply flex font-ibm text-zinc-400 text-6xl capitalize font-[500] tracking-tighter
     }
     
-    
+  
 
 }
 

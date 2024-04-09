@@ -12,8 +12,8 @@ const FeatureParagraph = ({children}) => {
         <p
             ref={ref}
             className={classNames(
-                'font-ibm text-[2.2rem] font-[300] transition-colors tracking-wider leading-tight',
-                isInView ? 'text-zinc-400' : 'text-zinc-500 '
+                'font-ibm text-[2.2rem] font-[400] transition-colors tracking-wider leading-tight',
+                isInView ? 'text-zinc-100' : 'text-orangi-100 '
             )}
         >
             {children}

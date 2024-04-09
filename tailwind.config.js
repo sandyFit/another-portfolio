@@ -53,6 +53,15 @@ export default {
           300: '#d4d4d8b3',
         },
 
+        greish: {
+          500: '#2d3234'
+        },
+
+        orangi: {
+          100: '#fca7af',
+          400: '#E8464E'
+        },
+
         orangey: {
           100: '#fc9799',
           200: '#fa787a',

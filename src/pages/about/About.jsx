@@ -29,25 +29,24 @@ const About = () => {
     return (        
         <section
             id="about"
-            className="w-full min-h-screen flex flex-col justify-between bg-plum-600 relative text-ibm">        
+            className="w-full min-h-screen flex flex-col justify-between relative  text-ibm">        
             
             <div className="flex w-full relative">               
-                <div className="flex flex-col items-end w-[20%] mt-28 fixed left-[95rem] ">
+                <div className="flex flex-col items-end w-[20%] mt-28 absolute left-[93.5rem] ">
                     <TimeZone/>
                 </div>
             </div> 
            
             <div className="flex flex-col justify-start items-start relative">
-
                 <div 
                     className={`flex flex-col fixed top-56 left-28 gap-8 ${isFixed ? 'fixed' : 'absolute'}`}>
                     <div className="flex flex-col z-50">
 
-                        <h2 className='w-full font-ibm text-[2.1rem] uppercase text-zinc-300 font-[300] 
+                        <h2 className='w-full font-ibm text-[2.1rem] uppercase text-zinc-800 font-[500] 
                             tracking-[2px] textSlidingLeft'>
                             Designer for Passion
                         </h2>
-                        <h2 className='w-full font-ibm text-[2.1rem] uppercase text-zinc-300 font-[300] 
+                        <h2 className='w-full font-ibm text-[2.1rem] uppercase text-zinc-300 font-[500] 
                             tracking-[2px] mt-[-.5rem] textSlidingRight'>
                             Developer for Fun
                         </h2>
@@ -67,10 +66,10 @@ const About = () => {
                 <div className="flex flex-col w-full items-end h-full mt-72 mb-40">                                                        
                     <div className="flex flex-col w-[68%] pl-44 pr-48">
                         
-                        <h2 className='w-full fontTitle uppercase text-[8rem] text-zinc-300 font-[500] 
+                        <h2 className='w-full font-ibm uppercase text-[10rem] text-zinc-300 font-[500] 
                             tracking-[2px] mt-24'>
                             who i
-                            <span className='text-salmon-400 ml-12'>am</span>
+                            <span className='text-zinc-900 ml-12'>am_</span>
                         </h2>
                                                    
                         <FeatureParagraph>       
@@ -86,9 +85,9 @@ const About = () => {
                         <FeatureParagraph>       
                             I'm currently on the lookout for  full-time roles or
                             freelance gigs that challenge my skills and stoke my passion for design and development.
-                            Fell free to reach out here
+                            Fell free to <span className='font-[600] text-zinc-900'> reach out</span> here
                             <Link to={'/contact'}>
-                                <BsArrowUpRight className='relative bottom-[2.5rem] left-[20.5rem] text-salmon-400' />
+                                <BsArrowUpRight className='relative bottom-[2.5rem] left-[20.5rem] text-zinc-900' />
                             </Link>                       
                         </FeatureParagraph>
                         <FeatureParagraph> 
@@ -101,22 +100,26 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className="w-full flex flex-col justify-center items-center bg-zinc-900 border-t-[1px] 
-                    border-dotted border-zinc-300 mt-32 card-container">
+                <div className="w-[90%] flex flex-col justify-start items-center bg-zinc-900 rounded-[40px]
+                    mt-32 mx-auto card-container">
 
-                    <div className="flex justify-center items-center pr-12 pt-28 relative">
+                    <div className="flex justify-start items-center pr-16 pt-48 relative">
 
-                        <h2 className='flex items-center justify-center w-full fontTitle uppercase text-[8rem] text-zinc-300 
-                            font-[900] tracking-[-5px]'> 
+                        <h2 className='flex items-center justify-start w-full font-ibm uppercase text-[9rem] text-zinc-200 
+                            font-[400] tracking-[-5px] ml-16'> 
                             what i 
-                            <span className='text-salmon-400 ml-8'>do</span>
+                            <span className='text-orangi-400 ml-24'>do</span>
                         </h2>
   
 
                         <p className='w-full font-ibm text-[2.2rem] font-[300] text-zinc-400 tracking-wider
-                             leading-tight'>
+                             leading-tight ml-8'>
                             Transitioning from design to creative development has solidified my commitment 
-                            to build digital products that are the perfect blend of meaningful aesthetics and function.
+                            to build digital products that are the perfect blend of meaningful aesthetics and function.<br/>
+                            Check out my <span className='text-orangi-400'>work</span> here 
+                            <Link to={'/projects'}>
+                                <BsArrowUpRight className='relative bottom-[2.5rem] left-[32rem] text-orangi-400' />
+                            </Link>
                         </p>
                         
                     </div>
@@ -128,21 +131,21 @@ const About = () => {
                             <BsAsterisk className='rotating-icon text-3xl text-zinc-300 absolute top-[4.4rem] left-12'/>
                             <h2 className='about-title text-zinc-300 z-10'> 
                                 web 
-                                <span className='about-title text-salmon-400 ml-8'>design</span>
+                                <span className='about-title text-orangi-400 ml-8'>design</span>
                             </h2>
                             
 
                             <div className="flex gap-32 relative">
 
                                 <p className='about-text'>
-                                    Intentional design begins with a deep comprehension of a business's purpose, followed by
-                                    an imaginative leap that helps me craft digital experience that people loves.
+                                    Intentional design begins with a deep understanding of a business's purpose, followed by
+                                    a creative leap that enables me to design digital experiences that people loves.
                                 </p>
 
-                                <div className="flex text-[25rem] text-zinc-800 font-[700] absolute left-[80rem]">
+                                <div className="flex text-[25rem] text-zinc-800 font-[700] absolute top-3 left-[75rem]">
                                     01</div>
 
-                                <ul className="w-[60%] flex flex-col gap-6 mt-20 z-20">                                   
+                                <ul className="w-[60%] flex flex-col gap-6 mt-16 z-20">                                   
                                     <li className="services-list">
                                         — Responsive Design
                                     </li>
@@ -167,7 +170,7 @@ const About = () => {
                             <BsAsterisk className='rotating-icon text-3xl text-zinc-300 absolute top-[4.4rem] left-12'/>
                             <h2 className='about-title text-zinc-300'> 
                                 web 
-                                <span className='about-title text-salmon-400 ml-8'>development</span>
+                                <span className='about-title text-orangi-400 ml-8'>development</span>
                             </h2>
                             
 
@@ -179,20 +182,20 @@ const About = () => {
                                     ensuring a standout and memorable online presence.
                                 </p>
 
-                                <div className="flex text-[25rem] text-zinc-800 bg-opacity-60 font-[700] absolute left-[80rem]">
+                                <div className="flex text-[25rem] text-zinc-800 bg-opacity-60 font-[700] absolute top-3 left-[75rem]">
                                     02</div>
 
-                                <ul className="w-[60%] flex flex-col gap-6 mt-20 z-20">                                   
+                                <ul className="w-[60%] flex flex-col gap-6 mt-16 z-20">                                   
                                     <li className="services-list">
                                         — Frontend Development
-                                    </li>
-                                                               
-                                    <li className="services-list">
-                                        — on-page SEO
-                                    </li>
+                                    </li>                        
                                                                 
                                     <li className="services-list">
                                         — CMS integrations
+                                        </li>
+                                        
+                                        <li className="services-list">
+                                        — on-page SEO
                                     </li>
                                     
                                 </ul>
@@ -206,7 +209,7 @@ const About = () => {
                             <BsAsterisk className='rotating-icon text-3xl text-zinc-300 absolute top-[4.4rem] left-12'/>
                             <h2 className='about-title text-zinc-300'> 
                                 motion 
-                                <span className='about-title text-salmon-400 ml-8'>design</span>
+                                <span className='about-title text-orangi-400 ml-8'>design</span>
                             </h2>
                             
 
@@ -217,10 +220,10 @@ const About = () => {
                                     ensuring a standout and memorable online presence.
                                 </p>
 
-                                <div className="flex text-[25rem] text-zinc-800 bg-opacity-60 font-[700] absolute left-[80rem]">
+                                <div className="flex text-[25rem] text-zinc-800 bg-opacity-60 font-[700] absolute top-3 left-[75rem]">
                                     03</div>
 
-                                <ul className="w-[60%] flex flex-col gap-6 mt-20 z-20">                                   
+                                <ul className="w-[60%] flex flex-col gap-6 mt-16 z-20">                                   
                                     <li className="services-list">
                                         — Animations
                                     </li>
@@ -245,11 +248,11 @@ const About = () => {
                         <div className="w-full flex flex-col absolute top-[210rem] bg-zinc-900 z-50">
                             <hr className="flex border-t-[1px] border-dotted border-zinc-300" />
                             <div className="flex justify-center items-center pr-12 py-48 relative">
-                                <h2 className='flex items-center justify-center w-full fontTitle uppercase text-[8rem] 
-                                    text-zinc-300 font-[900] tracking-[-5px]'> 
+                                <h2 className='flex items-center justify-start w-full font-ibm uppercase text-[10rem] text-zinc-300 
+                                    font-[400] tracking-[-5px] ml-16'> 
                                     my 
-                                    <span className='text-salmon-400 ml-8'>tools</span>
-                                </h2>       
+                                    <span className='text-orangi-400 ml-16'>tools</span>
+                                </h2>      
 
                                 <p className='w-full font-ibm text-[2.2rem] font-[300] text-zinc-400 tracking-wider
                                     leading-tight'>
@@ -275,11 +278,11 @@ const About = () => {
 
                 <div className="w-full h-[calc[100vh-100px]] flex flex-col mt-12 relative">
 
-                    <div className="w-full flex px-40">                                        
-                        <h2 className='w-full fontTitle uppercase text-[8rem] text-zinc-300 font-[500] 
+                    <div className="w-full flex pl-24">                                        
+                        <h2 className='w-full font-ibm uppercase text-[8rem] text-zinc-300 font-[500] 
                             tracking-[2px] leading-[120px] mt-24'>
                             you made it here <br/>
-                            <span className='text-salmon-400'>good move</span>!
+                            <span className='text-zinc-900'>good move!</span>
                         </h2>
                     </div>
 
@@ -287,17 +290,20 @@ const About = () => {
                         to={'about'}
                         smooth={true}
                         duration={600}
-                        className="w-[5%] flex border-2 border-dotted border-zinc-300 p-6 
+                        className="w-[5%] flex border-[3px] border-dotted border-zinc-900 p-6 
                         absolute top-72 left-[110rem] ">
-                       <BsArrowUp style={{color: '#ff637f', fontSize: '3rem',}}/>
+                       <BsArrowUp style={{color: '#d4d4d8', fontSize: '3rem',}}/>
                     </ScrollLink>
 
-                    <div className="w-[28%] flex mt-64 mb-24 relative left-[85rem]">
-                        <ContactBtn/>
+                    <div className="w-[28%] flex mt-64 pb-24  relative  left-[84rem]">
+                        {/* <p className='w-full font-ibm font-[400] text-zinc-300 text-[5rem] uppercase mr-[2rem]'>
+                            feel free to
+                        </p> */}
+                        <ContactBtn />
                     </div>
                 </div>              
 
-                <div className="w-full flex pt-[2rem] pb-3">                        
+                <div className="w-full flex pt-[2rem]">                        
                     <Footer/>
                 </div>
             </div>
